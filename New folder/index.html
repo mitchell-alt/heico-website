@@ -280,6 +280,45 @@ Leave A Review
     text-align: center;
     opacity: .9;
   }
+/* --- FIX: stop overlap in the estimate form --- */
+.estimateForm .formGrid{
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+  align-items: start;
+}
+
+/* Make labels stack their text + input cleanly */
+.estimateForm .formGrid label{
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-width: 0;
+}
+
+/* Force inputs/selects/textarea to stay inside their grid cell */
+.estimateForm input,
+.estimateForm select,
+.estimateForm textarea{
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+/* Full-width rows (textarea + upload + anything you want spanning both columns) */
+.estimateForm .full{
+  grid-column: 1 / -1;
+}
+
+/* Mobile: stack into 1 column */
+@media (max-width: 720px){
+  .estimateForm .formGrid{
+    grid-template-columns: 1fr;
+  }
+  .estimateForm .full{
+    grid-column: auto;
+  }
+}
 
   .estimate-form .grid{
     display: grid;
@@ -635,6 +674,7 @@ loadGallery();
 
 </body>
 </html>
+
 
 
 
