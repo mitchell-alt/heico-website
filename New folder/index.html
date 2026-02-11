@@ -184,90 +184,167 @@ Leave A Review
 
 <!-- FOOTER -->
 <!-- REQUEST ESTIMATE -->
-<section class="section" id="estimate">
-  <h2>Request an Estimate</h2>
-  <p>Tell us a little about your project and we’ll get back to you quickly.</p>
+<section id="estimate" class="section estimate">
+  <div class="estimate-wrap">
+    <h2>Request an Estimate</h2>
+    <p class="estimate-sub">Tell us a little about your project and we’ll get back to you quickly.</p>
 
-  <form
-    name="request-estimate"
-    method="POST"
-    data-netlify="true"
-    data-netlify-honeypot="bot-field"
-    enctype="multipart/form-data"
-    action="/thanks.html"
-    class="estimateForm"
-  >
-    <!-- Required for Netlify -->
-    <input type="hidden" name="form-name" value="request-estimate" />
-    <p style="display:none;">
-      <label>Don’t fill this out: <input name="bot-field" /></label>
-    </p>
+    <form name="estimate" method="POST" data-netlify="true" enctype="multipart/form-data" class="estimate-form">
+      <input type="hidden" name="form-name" value="estimate" />
 
-    <div class="formGrid">
-      <label>
-        Name
-        <input name="name" type="text" required />
-      </label>
+      <div class="grid">
+        <div class="field">
+          <label for="est-name">Name</label>
+          <input id="est-name" name="name" type="text" placeholder="Your name" required />
+        </div>
 
-      <label>
-        Phone
-        <input name="phone" type="tel" required />
-      </label>
+        <div class="field">
+          <label for="est-phone">Phone</label>
+          <input id="est-phone" name="phone" type="tel" placeholder="(406) 212-2398" required />
+        </div>
 
-      <label>
-        Email
-        <input name="email" type="email" />
-      </label>
+        <div class="field">
+          <label for="est-email">Email</label>
+          <input id="est-email" name="email" type="email" placeholder="you@email.com" />
+        </div>
 
-      <label>
-        City / Area
-        <input name="location" type="text" placeholder="Kalispell / Whitefish / Bigfork / Polson…" />
-      </label>
+        <div class="field">
+          <label for="est-city">City / Area</label>
+          <input id="est-city" name="city" type="text" placeholder="Kalispell / Whitefish / Bigfork / Polson…" />
+        </div>
 
-      <label class="full">
-        Project Type
-        <select name="projectType" required>
-          <option value="" selected disabled>Select one</option>
-          <option>Custom Home / New Construction</option>
-          <option>Commercial</option>
-          <option>Service / Troubleshooting</option>
-          <option>Panel / Service Upgrade</option>
-          <option>Remodel / Addition</option>
-          <option>Other</option>
-        </select>
-      </label>
+        <div class="field">
+          <label for="est-type">Project Type</label>
+          <select id="est-type" name="project_type" required>
+            <option value="" selected disabled>Select one</option>
+            <option>Custom Home (New Build)</option>
+            <option>Residential Remodel / Addition</option>
+            <option>Commercial</option>
+            <option>Service Call / Troubleshooting</option>
+            <option>Panel / Service Upgrade</option>
+            <option>Generator / Backup Power</option>
+            <option>Other</option>
+          </select>
+        </div>
 
-      <label class="full">
-        Project Details
-        <textarea name="message" rows="5" required placeholder="What are you building? Timeline? Any plans/photos?"></textarea>
-      </label>
-<label class="full">
-  Upload Plans / Photos (optional)
-  <input 
-    type="file" 
-    name="attachments" 
-    accept=".pdf,.jpg,.jpeg,.png,.heic,.webp"
-    multiple
-  />
-</label>
+        <div class="field">
+          <label for="est-upgrade">Optional Power Upgrade</label>
+          <select id="est-upgrade" name="power_upgrade">
+            <option value="" selected>Not sure / N/A</option>
+            <option>100A → 200A</option>
+            <option>200A → 320/400A</option>
+            <option>Meter/main replacement</option>
+            <option>Subpanel add</option>
+          </select>
+        </div>
 
-      <label class="full">
-        Optional Photos (max 10MB each)
-        <input name="attachments" type="file" accept="image/*" multiple />
-      </label>
-    </div>
+        <div class="field full">
+          <label for="est-details">Project Details</label>
+          <textarea id="est-details" name="details" placeholder="What are you building? Timeline? Any plans/photos?" required></textarea>
+        </div>
 
-    <button type="submit" class="btnPrimary">Send Request</button>
+        <div class="field full">
+          <label for="est-files">Upload Plans / Photos (optional)</label>
+          <input id="est-files" name="attachments" type="file" multiple accept="image/*,.pdf" />
+          <div class="hint">Accepted: images or PDFs • up to ~10MB total recommended</div>
+        </div>
+      </div>
 
-    <p class="formNote">
-      Prefer a call? <a href="tel:4062122398">406-212-2398</a> ·
-      <a href="mailto:Mitchell@heico-mt.com">Mitchell@heico-mt.com</a>
-    </p>
-  </form>
+      <button type="submit" class="btn">Send Request</button>
+
+      <div class="prefer">
+        Prefer a call? <a href="tel:14062122398">406-212-2398</a> •
+        <a href="mailto:Mitchell@heico-mt.com">Mitchell@heico-mt.com</a>
+      </div>
+    </form>
+  </div>
 </section>
 
-<div class="footer">
-© Heico Electric Inc.
+<style>
+  .estimate { padding-top: 44px; padding-bottom: 44px; }
+  .estimate-wrap{
+    max-width: 920px;
+    margin: 0 auto;
+    padding: 28px;
+    border-radius: 18px;
+    background: rgba(15,23,42,.72);
+    border: 1px solid rgba(255,255,255,.10);
+    backdrop-filter: blur(10px);
+  }
+  .estimate h2{
+    margin: 0 0 8px;
+    text-align: center;
+  }
+  .estimate-sub{
+    margin: 0 0 22px;
+    text-align: center;
+    opacity: .9;
+  }
+
+  .estimate-form .grid{
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0,1fr));
+    gap: 14px 16px;
+  }
+  .field{ display:flex; flex-direction:column; gap:8px; }
+  .field.full{ grid-column: 1 / -1; }
+
+  .field label{
+    font-weight: 600;
+    font-size: 14px;
+    opacity: .95;
+  }
+
+  .field input,
+  .field select,
+  .field textarea{
+    width: 100%;
+    padding: 12px 12px;
+    border-radius: 12px;
+    border: 1px solid rgba(255,255,255,.12);
+    background: rgba(2,6,23,.55);
+    color: #fff;
+    outline: none;
+  }
+  .field textarea{ min-height: 120px; resize: vertical; }
+
+  .field input::placeholder,
+  .field textarea::placeholder{ color: rgba(255,255,255,.65); }
+
+  .hint{
+    font-size: 12px;
+    opacity: .75;
+    margin-top: -2px;
+  }
+
+  .btn{
+    margin-top: 16px;
+    width: 100%;
+    padding: 12px 14px;
+    border-radius: 14px;
+    border: 1px solid rgba(255,255,255,.12);
+    background: rgba(37,99,235,.95);
+    color: #fff;
+    font-weight: 700;
+    cursor: pointer;
+  }
+  .btn:hover{ filter: brightness(1.03); }
+
+  .prefer{
+    margin-top: 14px;
+    text-align: center;
+    font-size: 14px;
+    opacity: .9;
+  }
+  .prefer a{ color: #93c5fd; text-decoration: none; }
+  .prefer a:hover{ text-decoration: underline; }
+
+  @media (max-width: 720px){
+    .estimate-wrap{ padding: 18px; }
+    .estimate-form .grid{ grid-template-columns: 1fr; }
+  }
+</style>
+
 </div>
 
 <!-- GALLERY LOADER -->
@@ -558,6 +635,7 @@ loadGallery();
 
 </body>
 </html>
+
 
 
 
