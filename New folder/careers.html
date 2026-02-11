@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Careers | Heico Electric Inc.</title>
+
+  <!-- Use your existing favicon if you want -->
+  <link rel="icon" href="heico-logo.png" />
+
+  <!-- If your main styles are inside index.html only, copy your <style> block here.
+       QUICK OPTION: paste the same <style> section from index.html into this page. -->
+
+  <style>
+    /* Minimal styling so it looks clean even before you copy your full site styles */
+    body{font-family:Arial,sans-serif;background:#0b1220;color:#fff;margin:0;}
+    .header{background:#111a2e;padding:18px 20px;display:flex;align-items:center;justify-content:space-between;}
+    .header a{color:#fff;text-decoration:none;margin-left:14px;opacity:.9}
+    .header a:hover{opacity:1}
+    .container{max-width:980px;margin:0 auto;padding:28px 18px;}
+    .card{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:18px;padding:20px;margin:18px 0;}
+    h1,h2{margin:0 0 10px 0}
+    p{opacity:.9;line-height:1.5}
+    table{width:100%;border-collapse:collapse;overflow:hidden;border-radius:14px;}
+    th,td{padding:12px 12px;border-bottom:1px solid rgba(255,255,255,.08);text-align:left;}
+    th{background:rgba(255,255,255,.06)}
+    .formGrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+    label{display:block;text-align:left}
+    input,select,textarea{width:100%;box-sizing:border-box;padding:12px;border-radius:12px;border:1px solid rgba(255,255,255,.15);background:rgba(0,0,0,.25);color:#fff}
+    textarea{min-height:120px;resize:vertical}
+    .full{grid-column:1/-1}
+    .btn{display:inline-block;width:100%;padding:14px;border-radius:14px;border:none;background:#2563eb;color:#fff;font-weight:700;cursor:pointer}
+    .btn:hover{filter:brightness(1.05)}
+    @media (max-width:760px){.formGrid{grid-template-columns:1fr}.full{grid-column:auto}}
+    .note{font-size:13px;opacity:.75}
+  </style>
+</head>
+
+<body>
+  <div class="header">
+    <div style="display:flex;align-items:center;gap:12px;">
+      <img src="heico-logo.png" alt="Heico Electric" style="height:44px;" />
+      <strong>Heico Electric Inc.</strong>
+    </div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="index.html#projects">Projects</a>
+      <a href="index.html#estimate">Request Estimate</a>
+      <a href="careers.html">Careers</a>
+    </nav>
+  </div>
+
+  <div class="container">
+    <div class="card">
+      <h1>Careers</h1>
+      <p>We’re always looking for sharp, reliable people. If you take pride in clean work, great communication, and doing it right — we want to hear from you.</p>
+      <p><strong>Serving:</strong> Kalispell • Whitefish • Bigfork • Lakeside • Somers • Polson</p>
+    </div>
+
+    <div class="card">
+      <h2>Pay Scale</h2>
+      <p class="note">Rates depend on experience, certifications, and performance reviews.</p>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Role</th>
+            <th>Typical Range</th>
+            <th>What it means</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Apprentice</td>
+            <td>$20–$28/hr</td>
+            <td>Learning the trade, supervised work, progressing hours + skills</td>
+          </tr>
+          <tr>
+            <td>Journeyman</td>
+            <td>$28–$38/hr</td>
+            <td>Independent work, code knowledge, quality installs, customer-ready</td>
+          </tr>
+          <tr>
+            <td>Lead / Foreman</td>
+            <td>$35–$45/hr</td>
+            <td>Runs jobs, coordinates crew, keeps schedule, owns quality + safety</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="card" id="apply">
+      <h2>Job Application</h2>
+      <p>Fill this out and attach a resume (optional). We’ll get back to you fast.</p>
+
+      <form
+        name="job-application"
+        method="POST"
+        data-netlify="true"
+        data-netlify-honeypot="bot-field"
+        enctype="multipart/form-data"
+        action="/thanks.html"
+      >
+        <!-- Required for Netlify -->
+        <input type="hidden" name="form-name" value="job-application" />
+        <p style="display:none;">
+          <label>Don’t fill this out: <input name="bot-field" /></label>
+        </p>
+
+        <div class="formGrid">
+          <label>
+            Full Name
+            <input name="name" type="text" required />
+          </label>
+
+          <label>
+            Phone
+            <input name="phone" type="tel" required />
+          </label>
+
+          <label>
+            Email
+            <input name="email" type="email" />
+          </label>
+
+          <label>
+            City / Area
+            <input name="location" type="text" placeholder="Kalispell / Whitefish / Bigfork / ..." />
+          </label>
+
+          <label class="full">
+            Position Interested In
+            <select name="position" required>
+              <option value="" selected disabled>Select one</option>
+              <option>Apprentice</option>
+              <option>Journeyman</option>
+              <option>Lead / Foreman</option>
+              <option>Office / Admin</option>
+              <option>Other</option>
+            </select>
+          </label>
+
+          <label class="full">
+            Experience / Notes
+            <textarea name="message" placeholder="Tell us about your experience, licenses, availability, etc." required></textarea>
+          </label>
+
+          <label class="full">
+            Upload Resume / Certifications (optional)
+            <input name="resume" type="file" accept=".pdf,.doc,.docx,image/*" />
+            <div class="note">Accepted: PDF/DOC/DOCX/images • keep it under ~10MB</div>
+          </label>
+
+          <button class="btn full" type="submit">Submit Application</button>
+        </div>
+      </form>
+    </div>
+
+    <div class="card">
+      <p><strong>Prefer a call?</strong> 406-212-2398 • Mitchell@heico-mt.com</p>
+      <p style="margin:0;opacity:.9;">Thats Watts up.</p>
+    </div>
+  </div>
+</body>
+</html>
