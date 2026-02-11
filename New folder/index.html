@@ -111,16 +111,12 @@ Email: <a href="mailto:Mitchell@heico-mt.com">Mitchell@heico-mt.com</a>
 </div>
 
 <!-- PROJECT GALLERY -->
-
-<!-- PROJECT GALLERY -->
-
-<section id="projects" style="padding:60px 20px;">
-  <div style="max-width:1100px;margin:0 auto;">
-    <h2>Recent Projects</h2>
-
-    <div id="projectsGrid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;"></div>
-  </div>
+<section id="projects" class="section">
+  <h2>Recent Projects</h2>
+  <div id="projectsGrid" class="gallery"></div>
 </section>
+
+
 
 </div>
 
@@ -401,8 +397,33 @@ loadGallery();
       grid.innerHTML = '<div style="opacity:.8;">Unable to load projects.</div>';
     });
 </script>
+<!-- LIGHTBOX -->
+<div id="lightbox" style="position:fixed;inset:0;background:rgba(0,0,0,.85);display:none;align-items:center;justify-content:center;z-index:9999;padding:18px;">
+  <div style="width:min(980px, 100%);">
+    <div style="display:flex;justify-content:space-between;align-items:center;color:#fff;margin-bottom:10px;">
+      <div>
+        <div id="lbTitle" style="font-size:18px;font-weight:700;"></div>
+        <div id="lbSubtitle" style="opacity:.85;font-size:14px;margin-top:2px;"></div>
+      </div>
+      <button id="lbClose" style="background:#fff;border:none;border-radius:10px;padding:10px 12px;cursor:pointer;">Close</button>
+    </div>
+
+    <div style="display:flex;gap:10px;align-items:center;">
+      <button id="lbPrev" style="background:rgba(255,255,255,.15);color:#fff;border:1px solid rgba(255,255,255,.25);border-radius:12px;padding:10px 12px;cursor:pointer;">◀</button>
+
+      <div style="flex:1;background:#111;border-radius:16px;overflow:hidden;aspect-ratio:16/10;display:flex;align-items:center;justify-content:center;">
+        <img id="lbImg" alt="Project photo" style="width:100%;height:100%;object-fit:contain;display:block;">
+      </div>
+
+      <button id="lbNext" style="background:rgba(255,255,255,.15);color:#fff;border:1px solid rgba(255,255,255,.25);border-radius:12px;padding:10px 12px;cursor:pointer;">▶</button>
+    </div>
+
+    <div id="lbDots" style="display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-top:12px;"></div>
+  </div>
+</div>
 
 </body>
 </html>
+
 
 
