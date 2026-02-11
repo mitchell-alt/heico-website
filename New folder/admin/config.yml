@@ -16,7 +16,15 @@ collections:
           - label: "Projects"
             name: "projects"
             widget: "list"
+            summary: "{{fields.title}}"
             fields:
               - { label: "Title", name: "title", widget: "string" }
-              - { label: "Subtitle", name: "subtitle", widget: "string" }
-              - { label: "Photo", name: "image", widget: "image" }
+              - { label: "Subtitle", name: "subtitle", widget: "string", required: false }
+              - label: "Photos"
+                name: "photos"
+                widget: "list"
+                required: false
+                field: { label: "Image", name: "image", widget: "image" }
+
+              # OPTIONAL: keep this for backward compatibility with your existing single-image entries
+              - { label: "Legacy Photo (old)", name: "image", widget: "image", required: false }
