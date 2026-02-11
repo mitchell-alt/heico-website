@@ -2,8 +2,8 @@ backend:
   name: git-gateway
   branch: main
 
-media_folder: "New folder/images"
-public_folder: "/images"
+media_folder: "New folder/images/uploads"
+public_folder: "/images/uploads"
 
 collections:
   - label: "Project Gallery"
@@ -20,6 +20,7 @@ collections:
             fields:
               - { label: "Title", name: "title", widget: "string" }
               - { label: "Subtitle", name: "subtitle", widget: "string", required: false }
+          
               - label: "Photos"
                 name: "photos"
                 widget: "list"
