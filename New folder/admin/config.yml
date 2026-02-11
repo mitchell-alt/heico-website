@@ -11,7 +11,7 @@ collections:
     files:
       - label: "Projects"
         name: "projects"
-        file: "New folder/gallery.json"
+        file: "gallery.json"
         fields:
           - label: "Projects"
             name: "projects"
