@@ -1,9 +1,13 @@
 {
   "projects": [
     {
-      "title": "• Commercial Electrical Installation NW Montana",
+      "title": "Commercial Electrical Installation NW Montana",
       "subtitle": "Electrical gear",
-      "image": "/images/project-2.jpg"
+      "photos": [
+        "/images/project-1.jpg",
+        "/images/project-2.jpg",
+        "/images/project-3.jpg"
+      ]
     }
   ]
 }
