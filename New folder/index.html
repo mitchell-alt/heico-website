@@ -25,12 +25,58 @@ padding:25px;
 .logo{
 height:80px;
 }
+/* ===== Hiring CTA ===== */
+
+.hiringCTA{
+  margin: 60px auto;
+  padding: 40px 20px;
+  max-width: 900px;
+  border-radius: 22px;
+  text-align: center;
+  background: linear-gradient(135deg,#1a2b5c,#2563eb);
+  box-shadow: 0 0 40px rgba(37,99,235,.35);
+}
+
+.hiringCTA h2{
+  margin: 0 0 10px 0;
+  font-size: 28px;
+}
+
+.hiringCTA p{
+  margin-bottom: 22px;
+  opacity: .9;
+}
+
+.hireBtn{
+  display: inline-block;
+  padding: 16px 28px;
+  background: white;
+  color: #1a2b5c;
+  border-radius: 14px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: .25s;
+}
+
+.hireBtn:hover{
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0,0,0,.35);
+}
 
 .section{
 padding:50px 20px;
 max-width:1100px;
 margin:auto;
 }
+<!-- WE'RE HIRING CTA -->
+<div class="hiringCTA">
+  <h2>We're Hiring Electricians</h2>
+  <p>Join a growing NW Montana electrical company that takes pride in clean, reliable work.</p>
+
+  <a href="careers.html" class="hireBtn">
+    View Careers & Apply →
+  </a>
+</div>
 
 .gallery{
 display:grid;
@@ -734,6 +780,7 @@ loadGallery();
 
 </body>
 </html>
+
 
 
 
