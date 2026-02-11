@@ -112,10 +112,15 @@ Email: <a href="mailto:Mitchell@heico-mt.com">Mitchell@heico-mt.com</a>
 
 <!-- PROJECT GALLERY -->
 
-<div class="section">
-<h2>Recent Projects</h2>
+<!-- PROJECT GALLERY -->
 
-<div id="galleryGrid" class="gallery"></div>
+<section id="projects" style="padding:60px 20px;">
+  <div style="max-width:1100px;margin:0 auto;">
+    <h2>Recent Projects</h2>
+
+    <div id="projectsGrid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;"></div>
+  </div>
+</section>
 
 </div>
 
@@ -231,6 +236,173 @@ loadGallery();
     });
   }
 </script>
+  <section id="projects" style="padding:60px 20px;">
+  <div style="max-width:1100px;margin:0 auto;">
+    <h2 style="margin:0 0 18px;">Projects</h2>
+    <p style="margin:0 0 24px;opacity:.85;">Custom homes & commercial electrical across NW Montana.</p>
+    <div id="projectsGrid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;"></div>
+  </div>
+</section>
+
+<!-- Lightbox -->
+<div id="lightbox" style="position:fixed;inset:0;background:rgba(0,0,0,.85);display:none;align-items:center;justify-content:center;z-index:9999;padding:18px;">
+  <div style="width:min(980px, 100%);">
+    <div style="display:flex;justify-content:space-between;align-items:center;color:#fff;margin-bottom:10px;">
+      <div>
+        <div id="lbTitle" style="font-size:18px;font-weight:700;"></div>
+        <div id="lbSubtitle" style="opacity:.85;font-size:14px;margin-top:2px;"></div>
+      </div>
+      <button id="lbClose" style="background:#fff;border:none;border-radius:10px;padding:10px 12px;cursor:pointer;">Close</button>
+    </div>
+
+    <div style="display:flex;gap:10px;align-items:center;">
+      <button id="lbPrev" style="background:rgba(255,255,255,.15);color:#fff;border:1px solid rgba(255,255,255,.25);border-radius:12px;padding:10px 12px;cursor:pointer;">◀</button>
+
+      <div style="flex:1;background:#111;border-radius:16px;overflow:hidden;aspect-ratio:16/10;display:flex;align-items:center;justify-content:center;">
+        <img id="lbImg" alt="Project photo" style="width:100%;height:100%;object-fit:contain;display:block;">
+      </div>
+
+      <button id="lbNext" style="background:rgba(255,255,255,.15);color:#fff;border:1px solid rgba(255,255,255,.25);border-radius:12px;padding:10px 12px;cursor:pointer;">▶</button>
+    </div>
+
+    <div id="lbDots" style="display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-top:12px;"></div>
+  </div>
+</div>
+
+<script>
+  const grid = document.getElementById('projectsGrid');
+  const lightbox = document.getElementById('lightbox');
+  const lbImg = document.getElementById('lbImg');
+  const lbTitle = document.getElementById('lbTitle');
+  const lbSubtitle = document.getElementById('lbSubtitle');
+  const lbDots = document.getElementById('lbDots');
+
+  let currentPhotos = [];
+  let currentIndex = 0;
+
+  function normalizePhotos(p) {
+    // New format: photos: ["...","..."]
+    if (Array.isArray(p.photos) && p.photos.length) return p.photos;
+
+    // Backward compatible: image: "/images/..."
+    if (p.image) return [p.image];
+
+    return [];
+  }
+
+  function openLightbox(project, startIndex = 0) {
+    currentPhotos = normalizePhotos(project);
+    currentIndex = Math.max(0, Math.min(startIndex, currentPhotos.length - 1));
+
+    lbTitle.textContent = project.title || '';
+    lbSubtitle.textContent = project.subtitle || '';
+
+    renderLightbox();
+    lightbox.style.display = 'flex';
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeLightbox() {
+    lightbox.style.display = 'none';
+    document.body.style.overflow = '';
+    currentPhotos = [];
+    currentIndex = 0;
+  }
+
+  function renderLightbox() {
+    if (!currentPhotos.length) return;
+
+    lbImg.src = currentPhotos[currentIndex];
+
+    // dots
+    lbDots.innerHTML = currentPhotos.map((_, i) => {
+      const active = i === currentIndex;
+      return `<button data-i="${i}"
+        style="width:10px;height:10px;border-radius:50%;border:none;cursor:pointer;opacity:${active ? 1 : .4};background:#fff;"></button>`;
+    }).join('');
+  }
+
+  function prevPhoto() {
+    if (!currentPhotos.length) return;
+    currentIndex = (currentIndex - 1 + currentPhotos.length) % currentPhotos.length;
+    renderLightbox();
+  }
+
+  function nextPhoto() {
+    if (!currentPhotos.length) return;
+    currentIndex = (currentIndex + 1) % currentPhotos.length;
+    renderLightbox();
+  }
+
+  document.getElementById('lbClose').addEventListener('click', closeLightbox);
+  document.getElementById('lbPrev').addEventListener('click', prevPhoto);
+  document.getElementById('lbNext').addEventListener('click', nextPhoto);
+
+  lightbox.addEventListener('click', (e) => {
+    if (e.target === lightbox) closeLightbox();
+  });
+
+  lbDots.addEventListener('click', (e) => {
+    const btn = e.target.closest('button[data-i]');
+    if (!btn) return;
+    currentIndex = parseInt(btn.getAttribute('data-i'), 10);
+    renderLightbox();
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (lightbox.style.display !== 'flex') return;
+    if (e.key === 'Escape') closeLightbox();
+    if (e.key === 'ArrowLeft') prevPhoto();
+    if (e.key === 'ArrowRight') nextPhoto();
+  });
+
+  fetch('/gallery.json', { cache: 'no-store' })
+    .then(r => r.json())
+    .then(data => {
+      const projects = (data && data.projects) ? data.projects : [];
+      if (!projects.length) {
+        grid.innerHTML = '<div style="opacity:.8;">Projects coming soon.</div>';
+        return;
+      }
+
+      grid.innerHTML = projects.map((p, idx) => {
+        const photos = normalizePhotos(p);
+        const cover = photos[0] || '';
+        const countBadge = photos.length > 1
+          ? `<div style="position:absolute;top:10px;right:10px;background:rgba(0,0,0,.7);color:#fff;padding:6px 10px;border-radius:999px;font-size:12px;">
+               ${photos.length} photos
+             </div>`
+          : '';
+
+        return `
+          <article data-idx="${idx}"
+            style="cursor:pointer;border:1px solid rgba(0,0,0,.08);border-radius:16px;overflow:hidden;background:#fff;position:relative;">
+            <div style="aspect-ratio:4/3;background:#f4f4f4;">
+              ${cover ? `<img src="${cover}" alt="${p.title || 'Project'}"
+                style="width:100%;height:100%;object-fit:cover;display:block;">` : ''}
+            </div>
+            ${countBadge}
+            <div style="padding:14px;">
+              <h3 style="margin:0 0 6px;font-size:16px;line-height:1.2;">${p.title || ''}</h3>
+              ${p.subtitle ? `<div style="opacity:.8;font-size:14px;">${p.subtitle}</div>` : ''}
+            </div>
+          </article>
+        `;
+      }).join('');
+
+      grid.addEventListener('click', (e) => {
+        const card = e.target.closest('article[data-idx]');
+        if (!card) return;
+        const i = parseInt(card.getAttribute('data-idx'), 10);
+        openLightbox(projects[i], 0);
+      });
+    })
+    .catch(() => {
+      grid.innerHTML = '<div style="opacity:.8;">Unable to load projects.</div>';
+    });
+</script>
+
 </body>
 </html>
+
 
