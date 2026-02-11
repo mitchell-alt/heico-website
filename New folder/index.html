@@ -183,6 +183,79 @@ Leave A Review
 </div>
 
 <!-- FOOTER -->
+<!-- REQUEST ESTIMATE -->
+<section class="section" id="estimate">
+  <h2>Request an Estimate</h2>
+  <p>Tell us a little about your project and we’ll get back to you quickly.</p>
+
+  <form
+    name="request-estimate"
+    method="POST"
+    data-netlify="true"
+    data-netlify-honeypot="bot-field"
+    enctype="multipart/form-data"
+    action="/thanks.html"
+    class="estimateForm"
+  >
+    <!-- Required for Netlify -->
+    <input type="hidden" name="form-name" value="request-estimate" />
+    <p style="display:none;">
+      <label>Don’t fill this out: <input name="bot-field" /></label>
+    </p>
+
+    <div class="formGrid">
+      <label>
+        Name
+        <input name="name" type="text" required />
+      </label>
+
+      <label>
+        Phone
+        <input name="phone" type="tel" required />
+      </label>
+
+      <label>
+        Email
+        <input name="email" type="email" />
+      </label>
+
+      <label>
+        City / Area
+        <input name="location" type="text" placeholder="Kalispell / Whitefish / Bigfork / Polson…" />
+      </label>
+
+      <label class="full">
+        Project Type
+        <select name="projectType" required>
+          <option value="" selected disabled>Select one</option>
+          <option>Custom Home / New Construction</option>
+          <option>Commercial</option>
+          <option>Service / Troubleshooting</option>
+          <option>Panel / Service Upgrade</option>
+          <option>Remodel / Addition</option>
+          <option>Other</option>
+        </select>
+      </label>
+
+      <label class="full">
+        Project Details
+        <textarea name="message" rows="5" required placeholder="What are you building? Timeline? Any plans/photos?"></textarea>
+      </label>
+
+      <label class="full">
+        Optional Photos (max 10MB each)
+        <input name="attachments" type="file" accept="image/*" multiple />
+      </label>
+    </div>
+
+    <button type="submit" class="btnPrimary">Send Request</button>
+
+    <p class="formNote">
+      Prefer a call? <a href="tel:4062122398">406-212-2398</a> ·
+      <a href="mailto:Mitchell@heico-mt.com">Mitchell@heico-mt.com</a>
+    </p>
+  </form>
+</section>
 
 <div class="footer">
 © Heico Electric Inc.
@@ -424,6 +497,7 @@ loadGallery();
 
 </body>
 </html>
+
 
 
 
