@@ -25,16 +25,11 @@ collections:
                 name: "photos"
                 widget: "list"
                 required: false
-                allow_add: true
-                collapsed: false
+                summary: "{{fields.image}}"
                 field:
                   label: "Image"
                   name: "image"
                   widget: "image"
-                  allow_multiple: true
-                  media_library:
-                    config:
-                      multiple: true
 
               # Backward compatibility for old single image entries
               - { label: "Legacy Photo (old)", name: "image", widget: "image", required: false }
