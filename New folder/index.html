@@ -141,16 +141,32 @@
 }
 
 /* Electric glow hover effect on slogan */
-.hero-tagline{
+.hero-tagline
+    {
   font-size:1rem;
   font-weight:700;
-  margin:10px 0 0 0;
+  margin:10px 0 0;
   color:#4da6ff;
   letter-spacing:0.4px;
   display:inline-block;
   transition: transform .18s ease, text-shadow .18s ease, filter .18s ease;
   text-shadow: 0 0 0 rgba(77,166,255,0);
+}.
+    hero-contact a{
+  color:#4da6ff;
+  font-weight:600;
+  text-decoration:none;
+  transition:.2s ease;
 }
+
+.hero-contact a:hover{
+  color:#79c1ff;
+  text-shadow:0 0 8px rgba(77,166,255,.5);
+}
+
+
+
+
 
 .hero-tagline:hover{
   transform: translateY(-1px);
@@ -727,6 +743,7 @@
   </script>
 </body>
 </html>
+
 
 
 
