@@ -22,10 +22,20 @@ collections:
               - { label: "Subtitle", name: "subtitle", widget: "string", required: false }
           
               - label: "Photos"
-                name: "photos"
-                widget: "list"
-                required: false
-                field: { label: "Image", name: "image", widget: "image" }
+ - label: "Photos"
+  name: "photos"
+  widget: "list"
+  required: false
+  allow_add: true
+  collapsed: false
+  field:
+    label: "Image"
+    name: "image"
+    widget: "image"
+    allow_multiple: true
+    media_library:
+      config:
+        multiple: true
 
               # OPTIONAL: keep this for backward compatibility with your existing single-image entries
               - { label: "Legacy Photo (old)", name: "image", widget: "image", required: false }
