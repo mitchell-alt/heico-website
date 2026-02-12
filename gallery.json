@@ -2,12 +2,14 @@
   "projects": [
     {
       "title": "Commercial Electrical Installation NW Montana",
-      "subtitle": "Electrical gear",
+      "subtitle": "Quartz Creek ",
       "photos": [
         "/images/project-1.jpg",
         "/images/project-2.jpg",
-        "/images/project-3.jpg"
-      ]
+        "/images/project-3.jpg",
+        "/images/uploads/quartz-creek-rough-in.jpeg"
+      ],
+      "image": "/images/uploads/quartz-creek-rough-in.jpeg"
     }
   ]
 }
