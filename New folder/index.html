@@ -36,7 +36,27 @@
       position:sticky;
       top:0;
       z-index:100;
-    }
+    }/* --- Brand logo treatment (adds colored background/pill) --- */
+
+
+.brandMark{
+  display:inline-flex;
+  align-items:center;
+  padding:10px 14px;
+  border-radius:14px;
+
+  /* “colored background” behind the logo */
+  background: linear-gradient(135deg, rgba(37,99,235,.95), rgba(17,26,46,.85));
+  border: 1px solid rgba(255,255,255,.12);
+  box-shadow: 0 10px 30px rgba(37,99,235,.20);
+}
+
+.brandMark img{
+  height:44px;       /* adjust bigger/smaller */
+  width:auto;
+  display:block;
+}
+
     .brand{
       display:flex;
       align-items:center;
@@ -434,19 +454,24 @@
 </head>
 
 <body>
-  <!-- HEADER -->
-  <div class="header">
-    <div class="brand">
-      <img src="heico-logo.png" alt="Heico Electric" />
-      <strong>Heico Electric Inc.</strong>
-    </div>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="#projects">Projects</a>
-      <a href="#estimate">Request Estimate</a>
-      <a href="careers.html">Careers</a>
-    </nav>
-  </div>
+<!-- HEADER -->
+<div class="header">
+
+  <a href="index.html" class="brand">
+    <span class="brandMark">
+      <img src="images/heico-logo-on-dark.png" alt="Heico Electric Inc." />
+    </span>
+    <span class="brandText">Heico Electric Inc.</span>
+  </a>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="#projects">Projects</a>
+    <a href="#estimate">Request Estimate</a>
+    <a href="careers.html">Careers</a>
+  </nav>
+
+</div>
 
   <div class="container">
 
@@ -773,6 +798,7 @@
 
 </body>
 </html>
+
 
 
 
