@@ -1,0 +1,14 @@
+{
+  "projects": [
+    {
+      "title": "Panel Installation",
+      "subtitle": "Clean residential service install",
+      "image": "images/project-1.jpg"
+    },
+    {
+      "title": "Custom Home Rough In",
+      "subtitle": "Professional layout and wiring",
+      "image": "images/project-2.jpg"
+    }
+  ]
+}
