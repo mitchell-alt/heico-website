@@ -74,73 +74,171 @@
     p{margin:0 0 10px;opacity:.92;line-height:1.55}
     .muted{opacity:.8}
 
-    /* HERO */
-    .hero{
-      display:grid;
-      grid-template-columns: 1.2fr .8fr;
-      gap:18px;
-      align-items:stretch;
-    }
-    .heroCard{
-      background:linear-gradient(135deg, rgba(37,99,235,.35), rgba(17,26,46,.9));
-      border:1px solid rgba(37,99,235,.35);
-      border-radius:22px;
-      padding:26px;
-      box-shadow:0 18px 40px rgba(37,99,235,.18);
-    }
-    .heroCard h1{font-size:34px;margin-bottom:8px}
-    .heroCard p{opacity:.92}
-    .hero-services {
-  font-size: 1.1rem;
-  opacity: 0.9;
-  margin-top: 8px;
+/* HERO */
+.hero{
+  display:grid;
+  grid-template-columns: 1.2fr .8fr;
+  gap:18px;
+  align-items:stretch;
 }
 
-.hero-tagline {
-  font-size: 1rem;
-  font-weight: 600;
-  margin-top: 8px;
-  color: #4da6ff;
-  letter-spacing: 0.4px;
+/* Shared subtle blueprint/wiring texture */
+.heroCard,
+.heroRight{
+  position:relative;
+  overflow:hidden;
 }
 
-    .ctaRow{display:flex;gap:12px;flex-wrap:wrap;margin-top:16px}
-    .btn{
-      display:inline-block;
-      padding:14px 18px;
-      border-radius:14px;
-      border:none;
-      background:var(--blue);
-      color:#fff;
-      font-weight:800;
-      text-decoration:none;
-      cursor:pointer;
-      text-align:center;
-      min-width:180px;
-    }
-    .btn:hover{filter:brightness(1.05)}
-    .btnOutline{
-      background:transparent;
-      border:1px solid rgba(255,255,255,.18);
-      color:#fff;
-      font-weight:700;
-    }
+/* Texture overlay (very subtle) */
+.heroCard::before,
+.heroRight::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  pointer-events:none;
+  opacity:.18;
+  background:
+    /* blueprint grid */
+    linear-gradient(rgba(255,255,255,.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,.06) 1px, transparent 1px),
+    /* faint "wiring" arcs */
+    radial-gradient(circle at 20% 25%, rgba(77,166,255,.18), transparent 55%),
+    radial-gradient(circle at 80% 30%, rgba(37,99,235,.16), transparent 55%),
+    radial-gradient(circle at 30% 80%, rgba(77,166,255,.12), transparent 60%);
+  background-size:
+    28px 28px,
+    28px 28px,
+    auto,
+    auto,
+    auto;
+  mix-blend-mode:screen;
+}
 
-    .heroRight{
-      background:var(--card);
-      border:1px solid var(--border);
-      border-radius:22px;
-      padding:22px;
-    }
-    .pillRow{display:flex;gap:10px;flex-wrap:wrap;margin-top:10px}
-    .pill{
-      padding:8px 10px;
-      border-radius:999px;
-      border:1px solid rgba(255,255,255,.12);
-      background:rgba(0,0,0,.18);
-      font-size:13px;
-      opacity:.9;
-    }
+.heroCard{
+  background:linear-gradient(135deg, rgba(37,99,235,.35), rgba(17,26,46,.9));
+  border:1px solid rgba(37,99,235,.35);
+  border-radius:22px;
+  padding:26px;
+  box-shadow:0 18px 40px rgba(37,99,235,.18);
+}
+
+.heroCard > *{
+  position:relative; /* keep text above texture */
+  z-index:1;
+}
+
+.heroCard h1{
+  font-size:34px;
+  margin:0 0 8px 0;
+  letter-spacing:.2px;
+}
+.heroCard p{opacity:.92}
+
+.hero-services{
+  font-size:1.1rem;
+  opacity:0.9;
+  margin:8px 0 0 0;
+}
+
+/* Electric glow hover effect on slogan */
+.hero-tagline{
+  font-size:1rem;
+  font-weight:700;
+  margin:10px 0 0 0;
+  color:#4da6ff;
+  letter-spacing:0.4px;
+  display:inline-block;
+  transition: transform .18s ease, text-shadow .18s ease, filter .18s ease;
+  text-shadow: 0 0 0 rgba(77,166,255,0);
+}
+
+.hero-tagline:hover{
+  transform: translateY(-1px);
+  filter: brightness(1.08);
+  text-shadow:
+    0 0 10px rgba(77,166,255,.45),
+    0 0 22px rgba(37,99,235,.35),
+    0 0 44px rgba(77,166,255,.22);
+}
+
+.ctaRow{
+  display:flex;
+  gap:12px;
+  flex-wrap:wrap;
+  margin-top:16px;
+}
+
+.btn{
+  display:inline-block;
+  padding:14px 18px;
+  border-radius:14px;
+  border:none;
+  background:var(--blue);
+  color:#fff;
+  font-weight:800;
+  text-decoration:none;
+  cursor:pointer;
+  text-align:center;
+  min-width:180px;
+  transition: filter .15s ease, transform .15s ease;
+}
+.btn:hover{
+  filter:brightness(1.05);
+  transform: translateY(-1px);
+}
+
+.btnOutline{
+  background:transparent;
+  border:1px solid rgba(255,255,255,.18);
+  color:#fff;
+  font-weight:700;
+}
+
+.heroRight{
+  background:var(--card);
+  border:1px solid var(--border);
+  border-radius:22px;
+  padding:22px;
+}
+.heroRight > *{
+  position:relative;
+  z-index:1;
+}
+
+.pillRow{
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
+  margin-top:10px;
+}
+.pill{
+  padding:8px 10px;
+  border-radius:999px;
+  border:1px solid rgba(255,255,255,.12);
+  background:rgba(0,0,0,.18);
+  font-size:13px;
+  opacity:.9;
+}
+
+/* Mobile hero optimization */
+@media (max-width: 900px){
+  .hero{
+    grid-template-columns: 1fr;
+  }
+  .heroCard{
+    padding:20px;
+  }
+  .heroCard h1{
+    font-size:30px;
+  }
+  .ctaRow{
+    gap:10px;
+  }
+  .btn{
+    width:100%;
+    min-width:0;
+  }
+}
 
     /* GALLERY */
     .gallery{
@@ -338,39 +436,46 @@
   <div class="container">
 
     <!-- HERO + HIRING CTA -->
-    <section class="section" id="home">
-      <div class="hero">
-        <div class="heroCard">
-         <h1>Heico Electric</h1>
+<section class="section" id="home" aria-label="Heico Electric hero">
+  <div class="hero">
+    <div class="heroCard">
+      <h1>Heico Electric</h1>
 
-<p class="hero-services">
- New Construction • Residential • Commercial • Service • Remodels  
-</p>
+      <p class="hero-services">
+        New Construction • Residential • Commercial • Service • Remodels
+      </p>
 
-<p class="hero-tagline">
-  That’s Watts up. Licensed electricians serving NW Montana.
-</p>
+      <p class="hero-tagline">
+        That’s Watts up. Licensed electricians serving NW Montana.
+      </p>
 
-          <div class="ctaRow">
-            <a class="btn" href="#estimate">Request an Estimate</a>
-            <a class="btn btnOutline" href="careers.html">We’re Hiring →</a>
-          </div>
-
-          <p class="note" style="margin-top:14px;">Prefer a call? <strong>406-212-2398</strong> • Mitchell@heico-mt.com</p>
-        </div>
-
-        <div class="heroRight">
-          <h2 style="margin-bottom:8px;">Serving NW Montana</h2>
-          <p class="muted">Kalispell • Whitefish • Bigfork • Lakeside • Somers • Polson</p>
-          <div class="pillRow">
-            <div class="pill">Licensed & Insured</div>
-            <div class="pill">Clean, Reliable Work</div>
-            <div class="pill">Safety First</div>
-            <div class="pill">Thats Watts up</div>
-          </div>
-        </div>
+      <div class="ctaRow">
+        <a class="btn" href="#estimate">Request an Estimate</a>
+        <a class="btn btnOutline" href="careers.html">We’re Hiring →</a>
       </div>
-    </section>
+
+      <p class="note hero-note">
+        Prefer a call?
+        <strong><a href="tel:+14062122398">406-212-2398</a></strong>
+        •
+        <a href="mailto:Mitchell@heico-mt.com">Mitchell@heico-mt.com</a>
+      </p>
+    </div>
+
+    <div class="heroRight" aria-label="Service area and badges">
+      <h2 class="heroH2">Serving NW Montana</h2>
+      <p class="muted">Kalispell • Whitefish • Bigfork • Lakeside • Somers • Polson</p>
+
+      <div class="pillRow" aria-label="Company highlights">
+        <div class="pill">Licensed &amp; Insured</div>
+        <div class="pill">Clean, Reliable Work</div>
+        <div class="pill">Safety First</div>
+        <div class="pill">That’s Watts up</div>
+      </div>
+    </div>
+  </div>
+</section>
+
 
     <!-- PROJECT GALLERY (ABOVE REQUEST ESTIMATE) -->
     <section class="section" id="projects">
@@ -622,5 +727,6 @@
   </script>
 </body>
 </html>
+
 
 
