@@ -2,7 +2,7 @@ backend:
   name: git-gateway
   branch: main
 
-media_folder: "New folder/images/uploads"
+media_folder: "images/uploads"
 public_folder: "/images/uploads"
 
 collections:
@@ -11,7 +11,7 @@ collections:
     files:
       - label: "Projects"
         name: "projects"
-        file: "New folder/gallery.json"
+        file: "gallery.json"
         fields:
           - label: "Projects"
             name: "projects"
@@ -19,15 +19,16 @@ collections:
             summary: "{{fields.title}}"
             fields:
               - { label: "Title", name: "title", widget: "string" }
-
               - { label: "Subtitle", name: "subtitle", widget: "string", required: false }
-
               - label: "Photos"
                 name: "photos"
                 widget: "list"
                 required: false
-                summary: "{{fields.image}}"
                 field:
                   label: "Image"
                   name: "image"
                   widget: "image"
+
+              # Backwards compatibility
+              - { label: "Legacy Photo (old)", name: "image", widget: "image", required: false }
+
