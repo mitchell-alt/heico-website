@@ -59,6 +59,13 @@
         "/images/uploads/sauna-lighting-4.jpg",
         "/images/uploads/lighted-mirrors.jpg"
       ]
+    },
+    {
+      "title": "Office/Shop",
+      "photos": [
+        "/images/uploads/shop-office.jpg",
+        "/images/uploads/office.jpg"
+      ]
     }
   ]
 }
