@@ -37,6 +37,18 @@
         "/images/uploads/underground-backfilled2.jpg",
         "/images/uploads/wire-pull.jpg"
       ]
-    }
+    },
+    {
+      "title": "Whitefish Shop",
+      "photos": [
+        "/images/uploads/whitefish-shop-3.jpg",
+        "/images/uploads/photo-feb-05-2026-1-29-28-pm.png",
+        "/images/uploads/tesla-charger.jpg",
+        "/images/uploads/whitefish-shop.jpg",
+        "/images/uploads/whitefish-shop-2.jpg",
+        "/images/uploads/brad-working.jpg"
+      ]
+    },
+    {}
   ]
 }
