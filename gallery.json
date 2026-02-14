@@ -49,6 +49,16 @@
         "/images/uploads/brad-working.jpg"
       ]
     },
-    {}
+    {
+      "title": "Finished Projects",
+      "photos": [
+        "/images/uploads/finished-home.jpg",
+        "/images/uploads/landscape-lighting-night.jpg",
+        "/images/uploads/fancy-light-fixture.jpg",
+        "/images/uploads/sauna-lighting-3.jpg",
+        "/images/uploads/sauna-lighting-4.jpg",
+        "/images/uploads/lighted-mirrors.jpg"
+      ]
+    }
   ]
 }
