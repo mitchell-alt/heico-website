@@ -484,7 +484,21 @@
   .siteNav a{
     padding: 8px 10px;
   }
+}/* SERVICE AREAS GRID */
+.areaGrid{
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 18px;
+  margin-top: 16px;
 }
+
+.areaGrid h3{
+  margin-bottom:6px;
+  font-size:16px;
+  font-weight:800;
+  color: rgba(255,255,255,.92);
+}
+
 
   </style>
 </head>
@@ -674,6 +688,44 @@
     </section>
 
   </div>
+<!-- SERVICE AREAS (SEO BOOST) -->
+<section class="section" id="service-areas" style="margin-top:30px;">
+  <div class="card">
+    <h2>Service Areas</h2>
+    <p class="muted">
+      Heico Electric provides licensed residential and commercial electrical services throughout Northwest Montana.
+      If you're searching for a reliable electrician in Kalispell, Whitefish, Bigfork, Lakeside, Somers, or Polson,
+      our team is ready to help with new construction, remodels, service work, and power upgrades.
+    </p>
+
+    <div class="areaGrid">
+      <div>
+        <h3>Kalispell Electrician</h3>
+        <p class="muted">New construction wiring, panel upgrades, troubleshooting, and custom homes in Kalispell, MT.</p>
+      </div>
+
+      <div>
+        <h3>Whitefish Electrician</h3>
+        <p class="muted">Residential and commercial electrical services in Whitefish and surrounding Flathead Valley.</p>
+      </div>
+
+      <div>
+        <h3>Bigfork Electrician</h3>
+        <p class="muted">Custom home electrical systems and remodel wiring solutions in Bigfork, MT.</p>
+      </div>
+
+      <div>
+        <h3>Lakeside & Somers Electrician</h3>
+        <p class="muted">Service calls, new installs, and system upgrades in Lakeside and Somers.</p>
+      </div>
+
+      <div>
+        <h3>Polson Electrician</h3>
+        <p class="muted">Panel replacements, generator hookups, and commercial projects in Polson, MT.</p>
+      </div>
+    </div>
+  </div>
+</section>
 
   <!-- FOOTER -->
   <div class="footer">
@@ -844,5 +896,6 @@
   </script>
 </body>
 </html>
+
 
 
