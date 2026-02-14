@@ -24,11 +24,5 @@ collections:
                 name: "photos"
                 widget: "list"
                 required: false
-                field:
-                  label: "Image"
-                  name: "image"
-                  widget: "image"
-
-              # Backwards compatibility
+                field: { label: "Image", name: "image", widget: "image" }
               - { label: "Legacy Photo (old)", name: "image", widget: "image", required: false }
-
