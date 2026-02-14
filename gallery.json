@@ -1,15 +1,17 @@
 {
   "projects": [
     {
-      "title": "Commercial Electrical Installation NW Montana",
-      "subtitle": "Quartz Creek ",
+      "title": "Residential ",
       "photos": [
-        "/images/project-1.jpg",
-        "/images/project-2.jpg",
-        "/images/project-3.jpg",
-        "/images/uploads/quartz-creek-rough-in.jpeg"
-      ],
-      "image": "/images/uploads/quartz-creek-rough-in.jpeg"
+        "/images/uploads/custom-home-rough-in-timber-axe.jpg",
+        "/images/uploads/clean-panel-make-up.jpg",
+        "/images/uploads/custom-home-rough-in-timber-axe-2.jpg",
+        "/images/uploads/playhouse-under-stairs.jpg",
+        "/images/uploads/residential-panel.jpg",
+        "/images/uploads/straight-home-runs.jpg",
+        "/images/uploads/timber-framing.jpg",
+        "/images/uploads/rough-in-with-a-view.jpg"
+      ]
     }
   ]
 }
