@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Meet the Team | Heico Electric Inc.</title>
+  <meta name="description" content="Meet the Heico Electric team serving Northwest Montana: Mitchell Heidegger and Bradley Babcock." />
+
+  <link rel="icon" href="heico-logo.png" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <header class="siteHeader">
+    <div class="headerInner">
+      <a href="index.html" class="brand" aria-label="Heico Electric home">
+        <span class="brandMark">
+          <img src="heico-logo.png" alt="Heico Electric Inc." />
+        </span>
+        <span class="brandText">Heico Electric Inc.</span>
+      </a>
+
+      <nav class="siteNav" aria-label="Primary">
+        <a href="index.html">Home</a>
+        <a href="index.html#projects">Projects</a>
+        <a href="index.html#estimate">Request Estimate</a>
+        <a href="careers.html">Careers</a>
+
+        <div class="navDropdown" tabindex="0">
+          <button class="navDropBtn" type="button">Meet the Team ▾</button>
+          <div class="navDropMenu">
+            <a href="team.html">Team</a>
+            <a href="bio.html">Mitchell</a>
+            <a href="bradley.html">Bradley</a>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <div class="container">
+    <div class="card">
+      <h1>Meet the Team</h1>
+      <p class="muted">
+        Local, licensed electricians serving Northwest Montana — Kalispell, Whitefish, Bigfork, Lakeside, Somers, and Polson.
+      </p>
+
+      <div class="teamGrid" style="margin-top:16px;">
+        <!-- Mitchell -->
+        <a class="teamCard" href="bio.html" aria-label="Meet Mitchell">
+          <div class="teamPhoto">
+            <img src="images/mitchell-heidegger-heico-electric.jpg" alt="Mitchell Heidegger" />
+          </div>
+          <div class="teamMeta">
+            <div class="teamName">Mitchell Heidegger</div>
+            <div class="teamRole">Owner &amp; Operator</div>
+            <div class="teamCta">View Bio →</div>
+          </div>
+        </a>
+
+        <!-- Bradley -->
+        <a class="teamCard" href="bradley.html" aria-label="Meet Bradley">
+          <div class="teamPhoto">
+            <img src="images/bradley-babcock-heico-electric.jpg" alt="Bradley Babcock" />
+          </div>
+          <div class="teamMeta">
+            <div class="teamName">Bradley Babcock</div>
+            <div class="teamRole">Electrician</div>
+            <div class="teamCta">View Bio →</div>
+          </div>
+        </a>
+      </div>
+
+      <div class="ctaRow" style="margin-top:18px;">
+        <a class="btn btnPrimary" href="index.html#estimate">Request an Estimate</a>
+        <a class="btn" href="tel:4062122398">Call 406-212-2398</a>
+      </div>
+    </div>
+
+    <div class="footer">
+      © <span id="year"></span> Heico Electric Inc. • Licensed &amp; Insured • Northwest Montana
+    </div>
+  </div>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
