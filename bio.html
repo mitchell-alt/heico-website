@@ -6,122 +6,91 @@
 
   <title>Mitchell Heidegger | Heico Electric Inc.</title>
   <meta name="description" content="Meet Mitchell Heidegger, owner of Heico Electric Inc. Serving Kalispell, Whitefish, Bigfork, Lakeside, Somers, and Polson with trusted electrical work." />
+
   <link rel="icon" href="images/Heico-logo.png" />
 
   <style>
-    /* =========================
-       HEICO MODERN BRIGHT THEME
-       (COPY FROM index.html)
-       ========================= */
     :root{
-      --bg0:#0f172a;
-      --bg1:#1e293b;
+      --bg0:#0f172a; --bg1:#1e293b;
       --panel: rgba(255,255,255,.14);
-      --panel2: rgba(255,255,255,.20);
       --border: rgba(255,255,255,.18);
       --text: rgba(255,255,255,.92);
       --muted: rgba(255,255,255,.74);
-      --accent:#2b67ff;
-      --accent2:#3aa0ff;
+      --accent:#2b67ff; --accent2:#3aa0ff;
       --shadowSoft: 0 10px 28px rgba(0,0,0,.22);
       --shadow: 0 18px 60px rgba(0,0,0,.32);
       --radius: 18px;
     }
-
     html,body{height:100%;}
     body{
       margin:0;
       font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
       color: var(--text);
-      text-align:left;
       background:
         radial-gradient(1000px 700px at 20% 10%, rgba(58,160,255,.22), transparent 60%),
         radial-gradient(900px 650px at 80% 10%, rgba(43,103,255,.18), transparent 55%),
         linear-gradient(180deg, var(--bg0) 0%, var(--bg1) 60%, #0b1220 100%);
       background-attachment: fixed;
     }
-
     a{color:var(--accent2);}
-    a:hover{filter:brightness(1.08);}
+    .container{max-width:1120px;margin:0 auto;padding:26px 18px 70px;}
 
-    .container{
-      max-width: 1120px;
-      margin: 0 auto;
-      padding: 26px 18px 70px;
+    /* Sticky header (matches your site) */
+    .siteHeader{
+      position: sticky; top:0; z-index:1000;
+      background: rgba(15, 23, 42, .78);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(255,255,255,.12);
+    }
+    .headerInner{
+      max-width:1120px;margin:0 auto;padding:12px 16px;
+      display:flex;align-items:center;justify-content:space-between;gap:14px;
+    }
+    .brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:rgba(255,255,255,.92);min-width:0;}
+    .brandMark{
+      display:inline-flex;align-items:center;justify-content:center;
+      padding:8px 10px;border-radius:14px;
+      background: linear-gradient(135deg, rgba(96,165,250,.22), rgba(59,130,246,.18));
+      border:1px solid rgba(255,255,255,.14);
+      box-shadow:0 10px 26px rgba(0,0,0,.22);
+    }
+    .brandMark img{height:38px;width:auto;display:block;object-fit:contain;}
+    .brandText{font-weight:800;letter-spacing:.2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+    .siteNav{display:flex;gap:10px;align-items:center;flex-wrap:wrap;justify-content:flex-end;}
+    .siteNav a{
+      color: rgba(255,255,255,.74);
+      text-decoration:none;font-weight:700;font-size:14px;
+      padding:10px 10px;border-radius:12px;
+    }
+    .siteNav a:hover{color: rgba(255,255,255,.92);background: rgba(255,255,255,.08);}
+    @media (max-width:720px){
+      .headerInner{flex-direction:column;align-items:flex-start;}
+      .brandMark img{height:34px;}
+      .siteNav{width:100%;justify-content:flex-start;}
+      .siteNav a{padding:8px 10px;}
     }
 
-    /* CARDS */
-    .card, .heroCard, .heroRight, .estimateWrap .card, #lightbox .lbPanel{
+    /* Card + bio layout */
+    .card{
       background: var(--panel);
       border: 1px solid var(--border);
       border-radius: var(--radius);
       box-shadow: var(--shadowSoft);
       backdrop-filter: blur(14px);
+      padding: 22px;
     }
-    .card{ padding: 22px; }
-
-    h1{ font-size: 42px; margin: 0 0 10px; line-height: 1.05; }
-    h2{ margin: 0 0 12px; font-size: 22px; }
-    p{ color: var(--muted); line-height: 1.6; margin: 0 0 12px; }
-    .muted{ color: var(--muted); }
-
-    /* BUTTONS */
-    .ctaRow{ display:flex; gap: 12px; flex-wrap: wrap; margin-top: 14px; }
+    h1{font-size:42px;margin:0 0 10px;line-height:1.05;}
+    h2{margin:0 0 12px;font-size:22px;}
+    p{color:var(--muted);line-height:1.6;margin:0 0 12px;}
+    .bioGrid{display:grid;grid-template-columns:420px 1fr;gap:18px;margin-top:18px;align-items:start;}
+    .bioPhoto{
+      width:100%;height:520px;object-fit:cover;border-radius:var(--radius);
+      border:1px solid rgba(255,255,255,.14);box-shadow:var(--shadow);display:block;
+      background: rgba(255,255,255,.06);
+    }
+    .ctaRow{display:flex;gap:12px;flex-wrap:wrap;margin-top:14px;}
     .btn{
-      display:inline-flex;
-      align-items:center;
-      justify-content:center;
-      padding: 12px 18px;
-      border-radius: 14px;
-      border: 1px solid rgba(255,255,255,.14);
-      color: #fff;
-      text-decoration:none;
-      font-weight: 900;
-      background: rgba(255,255,255,.08);
-      transition: .15s ease;
-    }
-    .btnPrimary{
-      background: linear-gradient(135deg, var(--accent2), var(--accent));
-      border-color: transparent;
-      box-shadow: 0 14px 38px rgba(43,103,255,.28);
-    }
-    .btn:hover{
-      filter: brightness(1.06);
-      transform: translateY(-1px);
-    }
-
-    /* FOOTER */
-    .footer{
-      background: rgba(255,255,255,.10);
-      border-top: 1px solid rgba(255,255,255,.10);
-      padding:18px 20px;
-      text-align:center;
-      opacity:.9;
-      margin-top:28px;
-      font-size:14px;
-    }
-
-    /* RESPONSIVE */
-    @media (max-width: 900px){
-      h1{ font-size: 32px; }
-      .btn{ width:100%; }
-    }
-
-    /* ===== HEADER (clean + modern + mobile-safe) ===== */
-    .siteHeader{
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      background: rgba(15, 23, 42, .78);
-      backdrop-filter: blur(12px);
-      border-bottom: 1px solid rgba(255,255,255,.12);
-    }
-
-    .headerInner{
-      max-width: 1120px;
-      margin: 0 auto;
-      padding: 12px 16px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 14px
+      display:inline-flex;align-items:center;justify-content:center;
+      padding:12px 18px;border-radius:14px;border:1px solid rgba(255,255,255,.14);
+      color:#fff;text-decoration:none;font-weight:900;background: rgba(255,255,255,.08);
+      transition:.
