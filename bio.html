@@ -4,15 +4,14 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Mitchell Heidegger | Heico Electric Inc. | Northwest Montana Electrician</title>
-  <meta name="description" content="Meet Mitchell Heidegger, owner of Heico Electric Inc. Serving Kalispell, Whitefish, Bigfork, Lakeside, Somers, and Polson with trusted residential and light commercial electrical work." />
-
+  <title>Mitchell Heidegger | Heico Electric Inc.</title>
+  <meta name="description" content="Meet Mitchell Heidegger, owner of Heico Electric Inc. Serving Kalispell, Whitefish, Bigfork, Lakeside, Somers, and Polson with trusted electrical work." />
   <link rel="icon" href="images/Heico-logo.png" />
 
   <style>
     /* =========================
        HEICO MODERN BRIGHT THEME
-       (Copied from index.html)
+       (COPY FROM index.html)
        ========================= */
     :root{
       --bg0:#0f172a;
@@ -51,113 +50,23 @@
       padding: 26px 18px 70px;
     }
 
-    .brand{
-      display:flex;
-      align-items:center;
-      gap:12px;
-      text-decoration:none;
-      color: var(--text);
-      min-width: 0;
-    }
-
-    .brandMark{
-      display:inline-flex;
-      align-items:center;
-      justify-content:center;
-      padding: 10px 12px;
-      border-radius: 14px;
-      background: linear-gradient(135deg, rgba(58,160,255,.22), rgba(43,103,255,.18));
-      border: 1px solid rgba(255,255,255,.14);
-      box-shadow: 0 10px 28px rgba(0,0,0,.22);
-      flex:0 0 auto;
-    }
-
-    .brandMark img{
-      height: 38px;
-      width: auto;
-      display:block;
-    }
-
-    .brandText{
-      font-weight: 800;
-      letter-spacing: .2px;
-      white-space: nowrap;
-      overflow:hidden;
-      text-overflow: ellipsis;
-    }
-
-    nav{
-      display:flex;
-      align-items:center;
-      gap: 10px;
-      flex-wrap: wrap;
-      justify-content:flex-end;
-    }
-
-    nav a{
-      color: var(--muted);
-      text-decoration:none;
-      font-weight: 700;
-      font-size: 14px;
-      padding: 10px 10px;
-      border-radius: 12px;
-    }
-    nav a:hover{
-      color: var(--text);
-      background: rgba(255,255,255,.07);
-    }
-
     /* CARDS */
-    .card{
+    .card, .heroCard, .heroRight, .estimateWrap .card, #lightbox .lbPanel{
       background: var(--panel);
       border: 1px solid var(--border);
       border-radius: var(--radius);
       box-shadow: var(--shadowSoft);
       backdrop-filter: blur(14px);
-      padding: 22px;
     }
+    .card{ padding: 22px; }
 
     h1{ font-size: 42px; margin: 0 0 10px; line-height: 1.05; }
     h2{ margin: 0 0 12px; font-size: 22px; }
     p{ color: var(--muted); line-height: 1.6; margin: 0 0 12px; }
-
     .muted{ color: var(--muted); }
 
-    /* ===== BIO PAGE EXTRAS (small + matches theme) ===== */
-    .topbar{
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap: 14px;
-      padding: 10px 0 4px;
-    }
-
-    .bioGrid{
-      display:grid;
-      grid-template-columns: 420px 1fr;
-      gap: 18px;
-      margin-top: 18px;
-    }
-
-    .bioPhoto{
-      width: 100%;
-      height: 520px;
-      object-fit: cover;
-      border-radius: var(--radius);
-      border: 1px solid rgba(255,255,255,.14);
-      box-shadow: var(--shadow);
-      display:block;
-      background: rgba(255,255,255,.06);
-    }
-
-    .tagline{
-      font-weight: 900;
-      color: rgba(255,255,255,.90);
-      margin-top: 8px;
-    }
-
+    /* BUTTONS */
     .ctaRow{ display:flex; gap: 12px; flex-wrap: wrap; margin-top: 14px; }
-
     .btn{
       display:inline-flex;
       align-items:center;
@@ -171,112 +80,48 @@
       background: rgba(255,255,255,.08);
       transition: .15s ease;
     }
-
-    .btn:hover{ transform: translateY(-1px); filter: brightness(1.06); }
-
     .btnPrimary{
       background: linear-gradient(135deg, var(--accent2), var(--accent));
-      border: 1px solid rgba(58,160,255,.45);
-      box-shadow: 0 18px 50px rgba(43,103,255,.22);
+      border-color: transparent;
+      box-shadow: 0 14px 38px rgba(43,103,255,.28);
+    }
+    .btn:hover{
+      filter: brightness(1.06);
+      transform: translateY(-1px);
     }
 
+    /* FOOTER */
     .footer{
-      margin-top: 26px;
+      background: rgba(255,255,255,.10);
+      border-top: 1px solid rgba(255,255,255,.10);
+      padding:18px 20px;
       text-align:center;
-      color: rgba(255,255,255,.70);
-      font-size: 14px;
       opacity:.9;
+      margin-top:28px;
+      font-size:14px;
     }
 
+    /* RESPONSIVE */
     @media (max-width: 900px){
       h1{ font-size: 32px; }
-      nav{ justify-content:flex-start; }
-      .bioGrid{ grid-template-columns: 1fr; }
-      .bioPhoto{ height: 420px; }
+      .btn{ width:100%; }
     }
-  </style>
-</head>
 
-<body>
-  <div class="container">
+    /* ===== HEADER (clean + modern + mobile-safe) ===== */
+    .siteHeader{
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(15, 23, 42, .78);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(255,255,255,.12);
+    }
 
-    <!-- TOP BAR / NAV (matches your existing nav styling) -->
-    <div class="topbar">
-      <a href="index.html" class="brand" aria-label="Heico Electric home">
-        <span class="brandMark">
-          <img src="images/Heico-logo.png" alt="Heico Electric Inc." />
-        </span>
-        <span class="brandText">Heico Electric Inc.</span>
-      </a>
-
-      <nav aria-label="Primary">
-        <a href="index.html">Home</a>
-        <a href="index.html#projects">Projects</a>
-        <a href="index.html#estimate">Request Estimate</a>
-        <a href="careers.html">Careers</a>
-        <a href="bio.html">Meet Mitchell</a>
-      </nav>
-    </div>
-
-    <!-- BIO CONTENT -->
-    <section class="bioGrid" aria-label="Mitchell Heidegger bio">
-      <div>
-        <!-- IMPORTANT: put the photo here in your repo:
-             images/uploads/mitchell-heidegger-heico-electric.jpg
-             If you place it elsewhere, adjust this path.
-        -->
-        <img
-          class="bioPhoto"
-          src="images/uploads/mitchell-heidegger-heico-electric.jpg"
-          alt="Mitchell Heidegger, owner of Heico Electric Inc., Northwest Montana electrician"
-        />
-      </div>
-
-      <div class="card">
-        <h1>Mitchell Heidegger</h1>
-        <p class="muted"><strong style="color:rgba(255,255,255,.92);">Owner &amp; Operator</strong> • Heico Electric Inc.</p>
-        <p class="muted">Serving Kalispell, Whitefish, Bigfork, Lakeside, Somers, Polson &amp; Northwest Montana</p>
-
-        <h2 style="margin-top:18px;">About Mitchell</h2>
-
-        <p>
-          <strong style="color:rgba(255,255,255,.92);">Mitchell Heidegger</strong> is the owner and licensed electrical contractor of
-          <strong style="color:rgba(255,255,255,.92);">Heico Electric Inc.</strong>, a trusted electrician serving Kalispell, Whitefish,
-          Bigfork, Lakeside, Somers, Polson, and communities throughout Northwest Montana. Heico Electric specializes in residential
-          and light commercial electrical services, delivering safe, code-compliant installations with a strong focus on quality
-          workmanship and dependable service.
-        </p>
-
-        <p>
-          With experience in new construction wiring, home remodels, electrical panel upgrades, service upgrades, lighting installation,
-          troubleshooting, and general electrical repairs, Mitchell works directly with homeowners, builders, and business owners to
-          provide efficient, long-lasting electrical solutions. Every project is completed with attention to detail, clear communication,
-          and a commitment to doing the job right the first time.
-        </p>
-
-        <p>
-          As a locally owned and operated electrical company in Northwest Montana, Heico Electric understands the needs of homes and
-          businesses in the Flathead Valley. Whether you need a licensed electrician in Kalispell, a panel upgrade in Whitefish, or
-          electrical work for a new build in Bigfork, Heico Electric delivers professional results you can trust.
-        </p>
-
-        <p class="tagline">Heico Electric Inc. — Thats Watts up.</p>
-
-        <div class="ctaRow">
-          <a class="btn btnPrimary" href="index.html#estimate">Request an Estimate</a>
-          <a class="btn" href="tel:4062122398">Call 406-212-2398</a>
-        </div>
-      </div>
-    </section>
-
-    <div class="footer">
-      © <span id="year"></span> Heico Electric Inc. • Licensed &amp; Insured • Northwest Montana
-    </div>
-
-  </div>
-
-  <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
-</body>
-</html>
+    .headerInner{
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 12px 16px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px
