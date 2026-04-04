@@ -3,10 +3,205 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Heico Electric Inc. | Electrician Kalispell MT</title>
+  <title>Heico Electric Inc. | Commercial & Custom Home Electrician in Kalispell, MT</title>
+  <meta
+    name="description"
+    content="Heico Electric delivers clean installs, clear communication, and dependable jobsite performance for commercial projects, custom homes, service work, and upgrades across Northwest Montana."
+  />
 
   <link rel="icon" href="heico-logo.png" />
   <link rel="stylesheet" href="styles.css" />
+
+  <style>
+    .hero {
+      display: grid;
+      grid-template-columns: 1.25fr 0.75fr;
+      gap: 22px;
+      align-items: stretch;
+    }
+
+    .heroCard {
+      padding: 40px;
+      border-radius: 24px;
+      background:
+        linear-gradient(rgba(10,16,26,.72), rgba(10,16,26,.56)),
+        url('heico-hero.jpg') center/cover no-repeat;
+      color: #fff;
+      min-height: 520px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      box-shadow: 0 18px 40px rgba(0,0,0,.18);
+    }
+
+    .heroCard h1 {
+      font-size: clamp(2.3rem, 5vw, 4.2rem);
+      line-height: 1.02;
+      margin-bottom: 14px;
+      color: #fff;
+    }
+
+    .hero-subheadline {
+      font-size: 1.15rem;
+      line-height: 1.7;
+      max-width: 760px;
+      color: rgba(255,255,255,.92);
+      margin-bottom: 16px;
+    }
+
+    .hero-services {
+      font-weight: 700;
+      color: #f3c24d;
+      margin-bottom: 16px;
+      font-size: 1rem;
+      letter-spacing: .01em;
+    }
+
+    .hero-tagline {
+      font-size: 1.05rem;
+      color: rgba(255,255,255,.9);
+      margin-bottom: 22px;
+    }
+
+    .heroRight {
+      background: #fff;
+      border-radius: 24px;
+      padding: 28px;
+      box-shadow: 0 18px 40px rgba(0,0,0,.08);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .heroRight h2 {
+      margin-bottom: 12px;
+    }
+
+    .builderPoints {
+      display: grid;
+      gap: 14px;
+      margin-top: 18px;
+    }
+
+    .builderPoint {
+      padding-bottom: 14px;
+      border-bottom: 1px solid rgba(0,0,0,.08);
+    }
+
+    .builderPoint:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+
+    .builderPoint strong {
+      display: block;
+      margin-bottom: 4px;
+    }
+
+    .trustStrip {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 14px;
+      margin-top: 18px;
+    }
+
+    .trustItem {
+      background: #fff;
+      border-radius: 16px;
+      padding: 16px 14px;
+      text-align: center;
+      font-weight: 700;
+      box-shadow: 0 10px 24px rgba(0,0,0,.05);
+    }
+
+    .sectionLead {
+      max-width: 860px;
+      margin-bottom: 26px;
+    }
+
+    .serviceCards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .serviceCard {
+      background: #fff;
+      border-radius: 20px;
+      padding: 24px;
+      box-shadow: 0 12px 28px rgba(0,0,0,.06);
+    }
+
+    .serviceCard h3 {
+      margin-bottom: 10px;
+    }
+
+    .fitGrid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+      margin-top: 18px;
+    }
+
+    .fitCardDark {
+      background: #111827;
+      color: #fff;
+      border-radius: 20px;
+      padding: 28px;
+    }
+
+    .fitCardLight {
+      background: #fff;
+      border-radius: 20px;
+      padding: 28px;
+      box-shadow: 0 12px 28px rgba(0,0,0,.06);
+    }
+
+    .fitCardDark ul,
+    .fitCardLight ul {
+      margin: 12px 0 0 18px;
+    }
+
+    .ctaBand {
+      margin-top: 28px;
+      background: linear-gradient(135deg, #111827, #1f2937);
+      color: #fff;
+      border-radius: 24px;
+      padding: 34px 28px;
+      text-align: center;
+      box-shadow: 0 18px 38px rgba(0,0,0,.14);
+    }
+
+    .ctaBand h2,
+    .ctaBand p {
+      color: #fff;
+    }
+
+    .ctaBand .ctaRow {
+      justify-content: center;
+      margin-top: 18px;
+    }
+
+    .footer {
+      margin-top: 28px;
+      text-align: center;
+      padding: 22px 16px;
+    }
+
+    @media (max-width: 960px) {
+      .hero,
+      .serviceCards,
+      .fitGrid,
+      .trustStrip {
+        grid-template-columns: 1fr;
+      }
+
+      .heroCard,
+      .heroRight {
+        min-height: auto;
+      }
+    }
+  </style>
 </head>
 
 <body>
@@ -20,24 +215,21 @@
         <span class="brandText">Heico Electric Inc.</span>
       </a>
 
-     <nav class="siteNav" aria-label="Primary">
-  <a href="index.html">Home</a>
-  <a href="index.html#projects">Projects</a>
-  <a href="index.html#estimate">Request Estimate</a>
-  <a href="careers.html">Careers</a>
+      <nav class="siteNav" aria-label="Primary">
+        <a href="index.html">Home</a>
+        <a href="index.html#projects">Projects</a>
+        <a href="index.html#estimate">Request Estimate</a>
+        <a href="careers.html">Careers</a>
 
-  <!-- TEAM DROPDOWN -->
-  <div class="navDropdown" tabindex="0">
-
-    <button class="navDropBtn" type="button">Meet the Team ▾</button>
-    <div class="navDropMenu">
-      <a href="team.html">Team</a>
-      <a href="bio.html">Mitchell</a>
-      <a href="bradley.html">Bradley</a>
-    </div>
-  </div>
-</nav>
-
+        <div class="navDropdown" tabindex="0">
+          <button class="navDropBtn" type="button">Meet the Team ▾</button>
+          <div class="navDropMenu">
+            <a href="team.html">Team</a>
+            <a href="bio.html">Mitchell</a>
+            <a href="bradley.html">Bradley</a>
+          </div>
+        </div>
+      </nav>
     </div>
   </header>
 
@@ -47,14 +239,18 @@
     <section id="home" aria-label="Heico Electric hero">
       <div class="hero">
         <div class="heroCard">
-          <h1>Heico Electric</h1>
-
           <p class="hero-services">
-            New Construction • Residential • Commercial • Service • Remodels
+            COMMERCIAL • CUSTOM HOMES • SERVICE • UPGRADES
+          </p>
+
+          <h1>Electrical work that keeps your project moving</h1>
+
+          <p class="hero-subheadline">
+            Heico Electric partners with commercial contractors and custom home builders across Northwest Montana to deliver clean installs, clear communication, and dependable jobsite performance.
           </p>
 
           <p class="hero-tagline">
-            That’s Watts up. Licensed electricians serving NW Montana.
+            <strong>That’s Watts up.</strong> Licensed electricians serving Kalispell, Whitefish, Bigfork, Lakeside, Somers, and Polson.
           </p>
 
           <div class="ctaRow">
@@ -70,19 +266,95 @@
           </p>
 
           <p class="note" style="margin-top:10px;">
-            ✓ Licensed &amp; Insured &nbsp; ✓ Local NW Montana Contractor &nbsp; ✓ Residential &amp; Commercial &nbsp; ✓ Service &amp; Power Upgrades
+            ✓ Licensed &amp; Insured &nbsp; ✓ Clean, Reliable Work &nbsp; ✓ Strong Communication &nbsp; ✓ Service &amp; Power Upgrades
           </p>
         </div>
 
-        <div class="heroRight" aria-label="Service area and badges">
-          <h2>Serving NW Montana</h2>
-          <p class="muted">Kalispell • Whitefish • Bigfork • Lakeside • Somers • Polson</p>
+        <div class="heroRight" aria-label="Why builders choose Heico">
+          <div>
+            <h2>Why builders call Heico first</h2>
+            <p class="muted">
+              We help make projects run smoother with dependable scheduling, clean workmanship, and no-drama coordination.
+            </p>
 
-          <div class="pillRow" aria-label="Company highlights">
-            <div class="pill">Licensed &amp; Insured</div>
-            <div class="pill">Clean, Reliable Work</div>
-            <div class="pill">Safety First</div>
-            <div class="pill">That’s Watts up</div>
+            <div class="builderPoints">
+              <div class="builderPoint">
+                <strong>Reliable scheduling</strong>
+                <span class="muted">We show up, stay organized, and help keep the build moving.</span>
+              </div>
+
+              <div class="builderPoint">
+                <strong>Clean, professional installs</strong>
+                <span class="muted">Quality workmanship that reflects well on your project and your reputation.</span>
+              </div>
+
+              <div class="builderPoint">
+                <strong>Clear communication</strong>
+                <span class="muted">Straight answers, smoother coordination, fewer surprises.</span>
+              </div>
+
+              <div class="builderPoint">
+                <strong>Best-fit projects</strong>
+                <span class="muted">Commercial electrical, custom homes, service work, and power upgrades throughout NW Montana.</span>
+              </div>
+            </div>
+          </div>
+
+          <div style="margin-top:20px;">
+            <h3 style="margin-bottom:8px;">Serving NW Montana</h3>
+            <p class="muted">Kalispell • Whitefish • Bigfork • Lakeside • Somers • Polson</p>
+
+            <div class="pillRow" aria-label="Company highlights" style="margin-top:14px;">
+              <div class="pill">Licensed &amp; Insured</div>
+              <div class="pill">Clean, Reliable Work</div>
+              <div class="pill">Safety First</div>
+              <div class="pill">That’s Watts up</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="trustStrip" aria-label="Trust highlights">
+        <div class="trustItem">Commercial &amp; Custom Homes</div>
+        <div class="trustItem">Service &amp; Power Upgrades</div>
+        <div class="trustItem">Licensed NW Montana Contractor</div>
+        <div class="trustItem">Built on Quality &amp; Communication</div>
+      </div>
+    </section>
+
+    <!-- BUILT FOR BUILDERS -->
+    <section class="section" style="margin-top:18px;">
+      <div class="card">
+        <h2>Built for builders who need reliable electrical</h2>
+        <div class="sectionLead">
+          <p class="muted">
+            The wrong electrical subcontractor slows everything down. Missed timelines, messy installs, and poor communication create headaches for the whole job.
+          </p>
+          <p class="muted">
+            Heico Electric is built to make the project easier with clean work, strong coordination, dependable scheduling, and follow-through from rough-in to finish.
+          </p>
+        </div>
+
+        <div class="serviceCards">
+          <div class="serviceCard">
+            <h3>Commercial</h3>
+            <p class="muted">
+              Electrical work for commercial projects that need strong communication, schedule awareness, and solid execution.
+            </p>
+          </div>
+
+          <div class="serviceCard">
+            <h3>Custom Homes</h3>
+            <p class="muted">
+              Detail-driven installs for custom home builders who care about quality, finish, and a smooth build process.
+            </p>
+          </div>
+
+          <div class="serviceCard">
+            <h3>Service &amp; Upgrades</h3>
+            <p class="muted">
+              Panel upgrades, troubleshooting, service work, and electrical improvements completed with professionalism and care.
+            </p>
           </div>
         </div>
       </div>
@@ -94,6 +366,39 @@
         <h2>Recent Projects</h2>
         <p class="muted">Tap a project to view photos.</p>
         <div id="galleryGrid" class="gallery"></div>
+      </div>
+    </section>
+
+    <!-- WHO WE WORK BEST WITH -->
+    <section class="section" style="margin-top:18px;">
+      <div class="fitGrid">
+        <div class="fitCardDark">
+          <h2>Who we work best with</h2>
+          <p>
+            Our best-fit clients are builders and contractors in Northwest Montana who want a subcontractor they can trust to show up, communicate well, and deliver clean work without babysitting the job.
+          </p>
+          <ul>
+            <li>Commercial contractors</li>
+            <li>Custom home builders</li>
+            <li>Small to mid-sized builders</li>
+            <li>Projects that value quality over cheap bids</li>
+          </ul>
+        </div>
+
+        <div class="fitCardLight">
+          <h2>Service Area</h2>
+          <p class="muted">
+            Proudly serving contractors, builders, and property owners across Northwest Montana.
+          </p>
+          <ul>
+            <li>Kalispell</li>
+            <li>Whitefish</li>
+            <li>Bigfork</li>
+            <li>Lakeside</li>
+            <li>Somers</li>
+            <li>Polson</li>
+          </ul>
+        </div>
       </div>
     </section>
 
@@ -187,20 +492,20 @@
       </div>
     </section>
 
-    <!-- SERVICE AREAS (SEO BOOST) -->
+    <!-- SERVICE AREAS / SEO -->
     <section class="section" id="service-areas" style="margin-top:30px;">
       <div class="card">
         <h2>Service Areas</h2>
         <p class="muted">
           Heico Electric provides licensed residential and commercial electrical services throughout Northwest Montana.
           If you're searching for a reliable electrician in Kalispell, Whitefish, Bigfork, Lakeside, Somers, or Polson,
-          our team is ready to help with new construction, remodels, service work, and power upgrades.
+          our team is ready to help with commercial work, custom homes, remodels, service calls, and power upgrades.
         </p>
 
         <div class="areaGrid">
           <div>
             <h3>Kalispell Electrician</h3>
-            <p class="muted">New construction wiring, panel upgrades, troubleshooting, and custom homes in Kalispell, MT.</p>
+            <p class="muted">Commercial electrical, custom homes, panel upgrades, troubleshooting, and new construction wiring in Kalispell, MT.</p>
           </div>
 
           <div>
@@ -210,7 +515,7 @@
 
           <div>
             <h3>Bigfork Electrician</h3>
-            <p class="muted">Custom home electrical systems and remodel wiring solutions in Bigfork, MT.</p>
+            <p class="muted">Custom home electrical systems, remodel wiring, and quality installations in Bigfork, MT.</p>
           </div>
 
           <div>
@@ -220,9 +525,24 @@
 
           <div>
             <h3>Polson Electrician</h3>
-            <p class="muted">Panel replacements, generator hookups, and commercial projects in Polson, MT.</p>
+            <p class="muted">Panel replacements, generator hookups, service upgrades, and commercial projects in Polson, MT.</p>
           </div>
         </div>
+      </div>
+    </section>
+
+    <!-- CTA BAND -->
+    <section class="section" style="margin-top:18px;">
+      <div class="ctaBand">
+        <h2>Need an electrician who helps the job run smoother?</h2>
+        <p>
+          Let’s talk about your commercial project, custom home, or electrical upgrade.
+        </p>
+        <div class="ctaRow">
+          <a class="btn btnPrimary" href="#estimate">Request an Estimate</a>
+          <a class="btn" href="tel:4062122398">Call 406-212-2398</a>
+        </div>
+        <p style="margin-top:14px; opacity:.92;"><strong>That’s Watts up.</strong></p>
       </div>
     </section>
 
@@ -393,7 +713,3 @@
   </script>
 </body>
 </html>
-
-
-
-
