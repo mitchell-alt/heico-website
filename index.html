@@ -11,197 +11,6 @@
 
   <link rel="icon" href="heico-logo.png" />
   <link rel="stylesheet" href="styles.css" />
-
-  <style>
-    .hero {
-      display: grid;
-      grid-template-columns: 1.25fr 0.75fr;
-      gap: 22px;
-      align-items: stretch;
-    }
-
-    .heroCard {
-      padding: 40px;
-      border-radius: 24px;
-      background:
-        linear-gradient(rgba(10,16,26,.72), rgba(10,16,26,.56)),
-        url('heico-hero.jpg') center/cover no-repeat;
-      color: #fff;
-      min-height: 520px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      box-shadow: 0 18px 40px rgba(0,0,0,.18);
-    }
-
-    .heroCard h1 {
-      font-size: clamp(2.3rem, 5vw, 4.2rem);
-      line-height: 1.02;
-      margin-bottom: 14px;
-      color: #fff;
-    }
-
-    .hero-subheadline {
-      font-size: 1.15rem;
-      line-height: 1.7;
-      max-width: 760px;
-      color: rgba(255,255,255,.92);
-      margin-bottom: 16px;
-    }
-
-    .hero-services {
-      font-weight: 700;
-      color: #f3c24d;
-      margin-bottom: 16px;
-      font-size: 1rem;
-      letter-spacing: .01em;
-    }
-
-    .hero-tagline {
-      font-size: 1.05rem;
-      color: rgba(255,255,255,.9);
-      margin-bottom: 22px;
-    }
-
-    .heroRight {
-      background: #fff;
-      border-radius: 24px;
-      padding: 28px;
-      box-shadow: 0 18px 40px rgba(0,0,0,.08);
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-    }
-
-    .heroRight h2 {
-      margin-bottom: 12px;
-    }
-
-    .builderPoints {
-      display: grid;
-      gap: 14px;
-      margin-top: 18px;
-    }
-
-    .builderPoint {
-      padding-bottom: 14px;
-      border-bottom: 1px solid rgba(0,0,0,.08);
-    }
-
-    .builderPoint:last-child {
-      border-bottom: none;
-      padding-bottom: 0;
-    }
-
-    .builderPoint strong {
-      display: block;
-      margin-bottom: 4px;
-    }
-
-    .trustStrip {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 14px;
-      margin-top: 18px;
-    }
-
-    .trustItem {
-      background: #fff;
-      border-radius: 16px;
-      padding: 16px 14px;
-      text-align: center;
-      font-weight: 700;
-      box-shadow: 0 10px 24px rgba(0,0,0,.05);
-    }
-
-    .sectionLead {
-      max-width: 860px;
-      margin-bottom: 26px;
-    }
-
-    .serviceCards {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 18px;
-    }
-
-    .serviceCard {
-      background: #fff;
-      border-radius: 20px;
-      padding: 24px;
-      box-shadow: 0 12px 28px rgba(0,0,0,.06);
-    }
-
-    .serviceCard h3 {
-      margin-bottom: 10px;
-    }
-
-    .fitGrid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 18px;
-      margin-top: 18px;
-    }
-
-    .fitCardDark {
-      background: #111827;
-      color: #fff;
-      border-radius: 20px;
-      padding: 28px;
-    }
-
-    .fitCardLight {
-      background: #fff;
-      border-radius: 20px;
-      padding: 28px;
-      box-shadow: 0 12px 28px rgba(0,0,0,.06);
-    }
-
-    .fitCardDark ul,
-    .fitCardLight ul {
-      margin: 12px 0 0 18px;
-    }
-
-    .ctaBand {
-      margin-top: 28px;
-      background: linear-gradient(135deg, #111827, #1f2937);
-      color: #fff;
-      border-radius: 24px;
-      padding: 34px 28px;
-      text-align: center;
-      box-shadow: 0 18px 38px rgba(0,0,0,.14);
-    }
-
-    .ctaBand h2,
-    .ctaBand p {
-      color: #fff;
-    }
-
-    .ctaBand .ctaRow {
-      justify-content: center;
-      margin-top: 18px;
-    }
-
-    .footer {
-      margin-top: 28px;
-      text-align: center;
-      padding: 22px 16px;
-    }
-
-    @media (max-width: 960px) {
-      .hero,
-      .serviceCards,
-      .fitGrid,
-      .trustStrip {
-        grid-template-columns: 1fr;
-      }
-
-      .heroCard,
-      .heroRight {
-        min-height: auto;
-      }
-    }
-  </style>
 </head>
 
 <body>
@@ -249,8 +58,10 @@
             Heico Electric partners with commercial contractors and custom home builders across Northwest Montana to deliver clean installs, clear communication, and dependable jobsite performance.
           </p>
 
-          <p class="hero-tagline">
-            <strong>That’s Watts up.</strong> Licensed electricians serving Kalispell, Whitefish, Bigfork, Lakeside, Somers, and Polson.
+          <p class="hero-tagline-main">That’s Watts up.</p>
+
+          <p class="hero-tagline-sub">
+            Licensed electricians serving Kalispell, Whitefish, Bigfork, Lakeside, Somers, and Polson.
           </p>
 
           <div class="ctaRow">
@@ -258,14 +69,14 @@
             <a class="btn" href="careers.html">We’re Hiring →</a>
           </div>
 
-          <p class="note" style="margin-top:14px;">
+          <p class="note hero-note">
             Prefer a call?
             <a href="tel:4062122398">406-212-2398</a>
             •
             <a href="mailto:Mitchell@heico-mt.com">Mitchell@heico-mt.com</a>
           </p>
 
-          <p class="note" style="margin-top:10px;">
+          <p class="note hero-note">
             ✓ Licensed &amp; Insured &nbsp; ✓ Clean, Reliable Work &nbsp; ✓ Strong Communication &nbsp; ✓ Service &amp; Power Upgrades
           </p>
         </div>
@@ -300,11 +111,11 @@
             </div>
           </div>
 
-          <div style="margin-top:20px;">
-            <h3 style="margin-bottom:8px;">Serving NW Montana</h3>
+          <div class="heroRightBottom">
+            <h3>Serving NW Montana</h3>
             <p class="muted">Kalispell • Whitefish • Bigfork • Lakeside • Somers • Polson</p>
 
-            <div class="pillRow" aria-label="Company highlights" style="margin-top:14px;">
+            <div class="pillRow" aria-label="Company highlights">
               <div class="pill">Licensed &amp; Insured</div>
               <div class="pill">Clean, Reliable Work</div>
               <div class="pill">Safety First</div>
@@ -323,7 +134,7 @@
     </section>
 
     <!-- BUILT FOR BUILDERS -->
-    <section class="section" style="margin-top:18px;">
+    <section class="section">
       <div class="card">
         <h2>Built for builders who need reliable electrical</h2>
         <div class="sectionLead">
@@ -361,7 +172,7 @@
     </section>
 
     <!-- PROJECTS -->
-    <section id="projects" style="margin-top:18px;">
+    <section id="projects" class="section">
       <div class="card">
         <h2>Recent Projects</h2>
         <p class="muted">Tap a project to view photos.</p>
@@ -370,7 +181,7 @@
     </section>
 
     <!-- WHO WE WORK BEST WITH -->
-    <section class="section" style="margin-top:18px;">
+    <section class="section">
       <div class="fitGrid">
         <div class="fitCardDark">
           <h2>Who we work best with</h2>
@@ -403,11 +214,11 @@
     </section>
 
     <!-- REQUEST ESTIMATE -->
-    <section id="estimate" style="margin-top:18px;">
+    <section id="estimate" class="section">
       <div class="estimateWrap">
         <div class="card">
-          <h2 style="text-align:center;">Request an Estimate</h2>
-          <p class="muted" style="text-align:center;">
+          <h2 class="center">Request an Estimate</h2>
+          <p class="muted center">
             Tell us a little about your project and we’ll get back to you quickly.
           </p>
 
@@ -421,7 +232,7 @@
             class="estimateForm"
           >
             <input type="hidden" name="form-name" value="request-estimate" />
-            <p style="display:none;">
+            <p class="hiddenField">
               <label>Don’t fill this out: <input name="bot-field" /></label>
             </p>
 
@@ -485,7 +296,7 @@
             </div>
           </form>
 
-          <p class="note" style="text-align:center;margin-top:14px;">
+          <p class="note center estimate-note">
             Prefer a call? <strong>406-212-2398</strong> • Mitchell@heico-mt.com
           </p>
         </div>
@@ -493,7 +304,7 @@
     </section>
 
     <!-- SERVICE AREAS / SEO -->
-    <section class="section" id="service-areas" style="margin-top:30px;">
+    <section class="section" id="service-areas">
       <div class="card">
         <h2>Service Areas</h2>
         <p class="muted">
@@ -532,7 +343,7 @@
     </section>
 
     <!-- CTA BAND -->
-    <section class="section" style="margin-top:18px;">
+    <section class="section">
       <div class="ctaBand">
         <h2>Need an electrician who helps the job run smoother?</h2>
         <p>
@@ -542,7 +353,7 @@
           <a class="btn btnPrimary" href="#estimate">Request an Estimate</a>
           <a class="btn" href="tel:4062122398">Call 406-212-2398</a>
         </div>
-        <p style="margin-top:14px; opacity:.92;"><strong>That’s Watts up.</strong></p>
+        <p class="ctaTagline"><strong>That’s Watts up.</strong></p>
       </div>
     </section>
 
