@@ -298,13 +298,13 @@ p {
 .bioHero {
   background:
     linear-gradient(rgba(10,16,26,.72), rgba(10,16,26,.56)),
-    url('mitchell-hero.jpg') center/cover no-repeat;
+    url('mitchell-heidegger-heico-electricmt.jpg') center/cover no-repeat;
 }
 
 .bradleyHero {
   background:
     linear-gradient(rgba(10,16,26,.72), rgba(10,16,26,.56)),
-    url('bradley-hero.jpg') center/cover no-repeat;
+    url('bradley-babcock-heico-electric.jpg') center/cover no-repeat;
 }
 
 .heroCard h1 {
