@@ -3,32 +3,35 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <title>Meet the Team | Heico Electric Inc.</title>
-  <meta name="description" content="Meet the Heico Electric team serving Northwest Montana: Mitchell Heidegger and Bradley Babcock." />
+  <title>Our Team | Heico Electric Inc.</title>
+  <meta
+    name="description"
+    content="Meet the team at Heico Electric. Reliable, professional electricians serving commercial projects, custom homes, and service work across Northwest Montana."
+  />
 
   <link rel="icon" href="heico-logo.png" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 
 <body>
+  <!-- HEADER -->
   <header class="siteHeader">
     <div class="headerInner">
-      <a href="index.html" class="brand" aria-label="Heico Electric home">
+      <a href="index.html" class="brand">
         <span class="brandMark">
           <img src="heico-logo.png" alt="Heico Electric Inc." />
         </span>
         <span class="brandText">Heico Electric Inc.</span>
       </a>
 
-      <nav class="siteNav" aria-label="Primary">
+      <nav class="siteNav">
         <a href="index.html">Home</a>
         <a href="index.html#projects">Projects</a>
         <a href="index.html#estimate">Request Estimate</a>
         <a href="careers.html">Careers</a>
 
         <div class="navDropdown" tabindex="0">
-          <button class="navDropBtn" type="button">Meet the Team ▾</button>
+          <button class="navDropBtn">Meet the Team ▾</button>
           <div class="navDropMenu">
             <a href="team.html">Team</a>
             <a href="bio.html">Mitchell</a>
@@ -40,51 +43,169 @@
   </header>
 
   <div class="container">
-    <div class="card">
-      <h1>Meet the Team</h1>
-      <p class="muted">
-        Local, licensed electricians serving Northwest Montana — Kalispell, Whitefish, Bigfork, Lakeside, Somers, and Polson.
-      </p>
 
-      <div class="teamGrid" style="margin-top:16px;">
-        <!-- Mitchell -->
-        <a class="teamCard" href="bio.html" aria-label="Meet Mitchell">
-          <div class="teamPhoto">
-            <img src="images/mitchell-heidegger-heico-electricmt.jpg" alt="Mitchell Heidegger" />
-          </div>
-          <div class="teamMeta">
-            <div class="teamName">Mitchell Heidegger</div>
-            <div class="teamRole">Owner, Master Electrician</div>
-            <div class="teamCta">View Bio →</div>
-          </div>
-        </a>
+    <!-- HERO -->
+    <section class="section">
+      <div class="hero">
+        <div class="heroCard teamHero">
+          <p class="hero-services">
+            THE PEOPLE BEHIND THE WORK • HEICO ELECTRIC
+          </p>
 
-        <!-- Bradley -->
-        <a class="teamCard" href="bradley.html" aria-label="Meet Bradley">
-          <div class="teamPhoto">
-            <img src="images/bradley-babcock-heico-electric.jpg" alt="Bradley Babcock" />
+          <h1>A team builders trust</h1>
+
+          <p class="hero-subheadline">
+            Heico Electric is built on reliability, clean workmanship, and strong communication. 
+            We’re not just electricians — we’re a team that helps keep projects moving and makes builders’ lives easier.
+          </p>
+
+          <p class="hero-tagline-main">That’s Watts up.</p>
+
+          <p class="hero-tagline-sub">
+            Serving commercial contractors, custom home builders, and property owners across Northwest Montana.
+          </p>
+        </div>
+
+        <div class="heroRight">
+          <h2>What we’re about</h2>
+
+          <div class="builderPoints">
+            <div class="builderPoint">
+              <strong>Clean work</strong>
+              <span class="muted">We take pride in installs that look good and last.</span>
+            </div>
+
+            <div class="builderPoint">
+              <strong>Reliability</strong>
+              <span class="muted">We show up, communicate clearly, and follow through.</span>
+            </div>
+
+            <div class="builderPoint">
+              <strong>Professionalism</strong>
+              <span class="muted">We represent your project the right way on site.</span>
+            </div>
+
+            <div class="builderPoint">
+              <strong>Builder-first mindset</strong>
+              <span class="muted">We understand what it takes to keep jobs moving.</span>
+            </div>
           </div>
-          <div class="teamMeta">
-            <div class="teamName">Bradley Babcock</div>
-            <div class="teamRole">Owner, Journeyman Electrician</div>
-            <div class="teamCta">View Bio →</div>
-          </div>
-        </a>
+        </div>
       </div>
+    </section>
 
-      <div class="ctaRow" style="margin-top:18px;">
-        <a class="btn btnPrimary" href="index.html#estimate">Request an Estimate</a>
-        <a class="btn" href="tel:4062122398">Call 406-212-2398</a>
+    <!-- TEAM MEMBERS -->
+    <section class="section">
+      <div class="card">
+        <h2>Meet the Team</h2>
+
+        <div class="teamGrid">
+
+          <!-- MITCHELL -->
+          <div class="teamCard">
+            <div class="teamImage">
+              <img src="mitchell.jpg" alt="Mitchell - Heico Electric" />
+            </div>
+
+            <div class="teamContent">
+              <h3>Mitchell Heidegger</h3>
+              <p class="teamRole">Owner • Electrician</p>
+
+              <p class="muted">
+                Mitchell leads Heico Electric with a focus on clean installs, strong communication, and dependable jobsite performance. 
+                He works closely with contractors and builders to make sure projects stay on track and electrical work is done right the first time.
+              </p>
+
+              <p class="muted">
+                His goal is simple: be the electrician builders want on every job.
+              </p>
+
+              <div class="teamActions">
+                <a class="btn" href="bio.html">Read Full Bio</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- BRADLEY -->
+          <div class="teamCard">
+            <div class="teamImage">
+              <img src="bradley.jpg" alt="Bradley - Heico Electric" />
+            </div>
+
+            <div class="teamContent">
+              <h3>Bradley</h3>
+              <p class="teamRole">Electrician</p>
+
+              <p class="muted">
+                Bradley is a key part of the Heico Electric team, known for reliability, attention to detail, and solid workmanship. 
+                He brings consistency and professionalism to every project, from rough-in to finish.
+              </p>
+
+              <p class="muted">
+                He’s the kind of electrician you can count on to show up, do clean work, and get the job done right.
+              </p>
+
+              <div class="teamActions">
+                <a class="btn" href="bradley.html">Read Full Bio</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
       </div>
-    </div>
+    </section>
 
+    <!-- WHY IT MATTERS -->
+    <section class="section">
+      <div class="fitGrid">
+        <div class="fitCardDark">
+          <h2>Why the team matters</h2>
+          <p>
+            Electrical work isn’t just about wiring — it’s about trust. Builders and homeowners need to know the people on site are reliable, professional, and take pride in their work.
+          </p>
+          <ul>
+            <li>Consistent communication</li>
+            <li>Clean, organized installs</li>
+            <li>Respect for the jobsite</li>
+            <li>Follow-through from start to finish</li>
+          </ul>
+        </div>
+
+        <div class="fitCardLight">
+          <h2>What you can expect</h2>
+          <p class="muted">
+            When you work with Heico Electric, you’re working with a team that takes your project seriously.
+          </p>
+          <ul>
+            <li>Professional crew on site</li>
+            <li>Dependable scheduling</li>
+            <li>Quality workmanship</li>
+            <li>No surprises, no shortcuts</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section">
+      <div class="ctaBand">
+        <h2>Need a reliable electrical team?</h2>
+        <p>
+          Let’s talk about your project and how we can help keep things moving.
+        </p>
+        <div class="ctaRow">
+          <a class="btn btnPrimary" href="index.html#estimate">Request an Estimate</a>
+          <a class="btn" href="tel:4062122398">Call 406-212-2398</a>
+        </div>
+        <p class="ctaTagline"><strong>That’s Watts up.</strong></p>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
     <div class="footer">
-      © <span id="year"></span> Heico Electric Inc. • Licensed &amp; Insured • Northwest Montana
+      Heico Electric Inc. • Kalispell, Montana • That’s Watts up
     </div>
-  </div>
 
-  <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
+  </div>
 </body>
 </html>
