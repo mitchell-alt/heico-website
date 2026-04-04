@@ -4,189 +4,293 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Careers | Heico Electric Inc.</title>
+  <meta
+    name="description"
+    content="Join Heico Electric in Northwest Montana. We’re looking for reliable people who care about clean work, communication, and doing the job right."
+  />
+
   <link rel="icon" href="heico-logo.png" />
-
-  <style>
-    body{font-family:Arial,sans-serif;background:#0b1220;color:#fff;margin:0}
-    .header{background:#111a2e;padding:18px 20px;display:flex;align-items:center;justify-content:space-between;gap:16px}
-    .header a{color:#fff;text-decoration:none;opacity:.92}
-    .header a:hover{opacity:1}
-    .brand{display:flex;align-items:center;gap:12px}
-    .brand img{height:44px}
-    nav{display:flex;gap:14px;flex-wrap:wrap}
-
-    .container{max-width:980px;margin:0 auto;padding:28px 18px}
-    .card{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:18px;padding:20px;margin:18px 0}
-    h1,h2{margin:0 0 10px}
-    p{opacity:.92;line-height:1.55}
-
-    table{width:100%;border-collapse:collapse;overflow:hidden;border-radius:14px}
-    th,td{padding:12px 12px;border-bottom:1px solid rgba(255,255,255,.08);text-align:left}
-    th{background:rgba(255,255,255,.06)}
-
-    /* forms */
-    .formGrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
-    label{display:flex;flex-direction:column;gap:6px;min-width:0;text-align:left}
-    input,select,textarea{
-      width:100%;
-      box-sizing:border-box;
-      padding:12px;
-      border-radius:12px;
-      border:1px solid rgba(255,255,255,.15);
-      background:rgba(0,0,0,.25);
-      color:#fff;
-      outline:none;
-    }
-    textarea{min-height:120px;resize:vertical}
-    .full{grid-column:1 / -1}
-
-    .btn{
-      display:inline-block;width:100%;
-      padding:14px;border-radius:14px;border:none;
-      background:#2563eb;color:#fff;font-weight:700;cursor:pointer
-    }
-    .btn:hover{filter:brightness(1.05)}
-    .note{font-size:13px;opacity:.75}
-
-    @media (max-width:760px){
-      .formGrid{grid-template-columns:1fr}
-      nav{gap:10px}
-    }
-  </style>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 
 <body>
-  <div class="header">
-    <div class="brand">
-      <img src="heico-logo.png" alt="Heico Electric" />
-      <strong>Heico Electric Inc.</strong>
+  <!-- HEADER -->
+  <header class="siteHeader">
+    <div class="headerInner">
+      <a href="index.html" class="brand" aria-label="Heico Electric home">
+        <span class="brandMark">
+          <img src="heico-logo.png" alt="Heico Electric Inc." />
+        </span>
+        <span class="brandText">Heico Electric Inc.</span>
+      </a>
+
+      <nav class="siteNav" aria-label="Primary">
+        <a href="index.html">Home</a>
+        <a href="index.html#projects">Projects</a>
+        <a href="index.html#estimate">Request Estimate</a>
+        <a href="careers.html">Careers</a>
+
+        <div class="navDropdown" tabindex="0">
+          <button class="navDropBtn" type="button">Meet the Team ▾</button>
+          <div class="navDropMenu">
+            <a href="team.html">Team</a>
+            <a href="bio.html">Mitchell</a>
+            <a href="bradley.html">Bradley</a>
+          </div>
+        </div>
+      </nav>
     </div>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="index.html#projects">Projects</a>
-      <a href="index.html#estimate">Request Estimate</a>
-      <a href="careers.html">Careers</a>
-    </nav>
-  </div>
+  </header>
 
   <div class="container">
-    <div class="card">
-      <h1>Careers</h1>
-      <p>We’re looking for sharp, reliable people. If you take pride in clean work, great communication, and doing it right — we want to hear from you.</p>
-      <p><strong>Serving:</strong> Kalispell • Whitefish • Bigfork • Lakeside • Somers • Polson</p>
-    </div>
 
-    <div class="card">
-      <h2>Pay Scale</h2>
-      <p class="note">Rates depend on experience, certifications, and performance reviews.</p>
-      <table>
-        <thead>
-          <tr>
-            <th>Role</th>
-            <th>Typical Range</th>
-            <th>What it means</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Apprentice</td>
-            <td>$20–$28/hr</td>
-            <td>Learning the trade, supervised work, progressing hours + skills</td>
-          </tr>
-          <tr>
-            <td>Journeyman</td>
-            <td>$28–$38/hr</td>
-            <td>Independent work, code knowledge, quality installs, customer-ready</td>
-          </tr>
-          <tr>
-            <td>Lead / Foreman</td>
-            <td>$35–$45+/hr</td>
-            <td>Runs jobs, coordinates crew, keeps schedule, owns quality + safety</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
+    <!-- HERO -->
+    <section class="section" aria-label="Careers hero">
+      <div class="hero">
+        <div class="heroCard careersHero">
+          <p class="hero-services">
+            JOIN THE TEAM • NORTHWEST MONTANA • ELECTRICAL CAREERS
+          </p>
 
-    <div class="card">
-      <h2>Apprenticeship</h2>
-      <p>If you’re new to the trade, we can help you grow into a solid electrician.</p>
-      <ul style="opacity:.92;line-height:1.6">
-        <li>Paid, hands-on field learning with experienced techs</li>
-        <li>Clear expectations + performance-based raises</li>
-        <li>We like people who show up, work hard, and care about quality</li>
-      </ul>
-    </div>
+          <h1>Work with people who care about clean work and doing it right</h1>
 
-    <div class="card" id="apply">
-      <h2>Job Application</h2>
-      <p>Fill this out and attach a resume (optional). We’ll get back to you fast.</p>
+          <p class="hero-subheadline">
+            Heico Electric is looking for reliable people who take pride in quality, communication, and professionalism on the jobsite. We work on commercial projects, custom homes, service work, and electrical upgrades across Northwest Montana.
+          </p>
 
-      <form
-        name="job-application"
-        method="POST"
-        data-netlify="true"
-        data-netlify-honeypot="bot-field"
-        enctype="multipart/form-data"
-        action="/thanks.html"
-      >
-        <input type="hidden" name="form-name" value="job-application" />
-        <p style="display:none">
-          <label>Don’t fill this out: <input name="bot-field" /></label>
-        </p>
+          <p class="hero-tagline-main">That’s Watts up.</p>
 
-        <div class="formGrid">
-          <label>
-            Full Name
-            <input name="name" type="text" required />
-          </label>
+          <p class="hero-tagline-sub">
+            If you show up, work hard, and care about craftsmanship, you’ll fit in here.
+          </p>
 
-          <label>
-            Phone
-            <input name="phone" type="tel" required />
-          </label>
+          <div class="ctaRow">
+            <a class="btn btnPrimary" href="#apply">Apply Now</a>
+            <a class="btn" href="tel:4062122398">Call 406-212-2398</a>
+          </div>
 
-          <label>
-            Email
-            <input name="email" type="email" />
-          </label>
-
-          <label>
-            City / Area
-            <input name="location" type="text" placeholder="Kalispell / Whitefish / Bigfork / ..." />
-          </label>
-
-          <label class="full">
-            Position Interested In
-            <select name="position" required>
-              <option value="" selected disabled>Select one</option>
-              <option>Apprentice</option>
-              <option>Journeyman</option>
-              <option>Lead / Foreman</option>
-              <option>Office / Admin</option>
-              <option>Other</option>
-            </select>
-          </label>
-
-          <label class="full">
-            Experience / Notes
-            <textarea name="message" placeholder="Tell us about your experience, licenses, availability, etc." required></textarea>
-          </label>
-
-          <label class="full">
-            Upload Resume / Certifications (optional)
-            <input name="resume" type="file" accept=".pdf,.doc,.docx,image/*" />
-            <div class="note">Accepted: PDF/DOC/DOCX/images • keep it under ~10MB</div>
-          </label>
-
-          <button class="btn full" type="submit">Submit Application</button>
+          <p class="note hero-note">
+            Questions?
+            <a href="mailto:Mitchell@heico-mt.com">Mitchell@heico-mt.com</a>
+          </p>
         </div>
-      </form>
+
+        <div class="heroRight" aria-label="Why work at Heico">
+          <div>
+            <h2>What it’s like to work here</h2>
+            <p class="muted">
+              We want dependable people who care about quality, communicate well, and take pride in doing the job right.
+            </p>
+
+            <div class="builderPoints">
+              <div class="builderPoint">
+                <strong>Clean work matters here</strong>
+                <span class="muted">We care about neat installs, organized jobs, and quality you can stand behind.</span>
+              </div>
+
+              <div class="builderPoint">
+                <strong>Good communication matters here</strong>
+                <span class="muted">We want people who can work with the team, coordinate well, and be professional.</span>
+              </div>
+
+              <div class="builderPoint">
+                <strong>Reliability matters here</strong>
+                <span class="muted">Show up, be prepared, and do what you say you’re going to do.</span>
+              </div>
+
+              <div class="builderPoint">
+                <strong>Professionalism matters here</strong>
+                <span class="muted">We’re building a team that clients trust and builders want back on the next project.</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="heroRightBottom">
+            <h3>Best fit for</h3>
+            <p class="muted">Apprentices • Journeymen • Hard workers • Team players</p>
+
+            <div class="pillRow" aria-label="Career highlights">
+              <div class="pill">Commercial Work</div>
+              <div class="pill">Custom Homes</div>
+              <div class="pill">Clean Craftsmanship</div>
+              <div class="pill">Northwest Montana</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="trustStrip" aria-label="Career trust highlights">
+        <div class="trustItem">Clean Work Culture</div>
+        <div class="trustItem">Reliable Team</div>
+        <div class="trustItem">Commercial &amp; Custom Homes</div>
+        <div class="trustItem">Built on Craftsmanship</div>
+      </div>
+    </section>
+
+    <!-- WHY JOIN -->
+    <section class="section">
+      <div class="card">
+        <h2>Why join Heico Electric?</h2>
+        <div class="sectionLead">
+          <p class="muted">
+            We’re building a team that values skill, reliability, and pride in workmanship. If you want to work with good people, do meaningful work, and be part of a company that cares about doing the job right, we’d like to hear from you.
+          </p>
+        </div>
+
+        <div class="serviceCards">
+          <div class="serviceCard">
+            <h3>Good people</h3>
+            <p class="muted">
+              Work with a team that values respect, communication, and showing up ready to get the job done.
+            </p>
+          </div>
+
+          <div class="serviceCard">
+            <h3>Quality work</h3>
+            <p class="muted">
+              Be part of projects where craftsmanship matters, from commercial work to detail-driven custom homes.
+            </p>
+          </div>
+
+          <div class="serviceCard">
+            <h3>Professional growth</h3>
+            <p class="muted">
+              We want dependable people who take pride in improving their skills and building a solid career.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHO WE'RE LOOKING FOR -->
+    <section class="section">
+      <div class="fitGrid">
+        <div class="fitCardDark">
+          <h2>Who we’re looking for</h2>
+          <p>
+            We want team members who care about quality, reliability, and professionalism.
+          </p>
+          <ul>
+            <li>Apprentice electricians</li>
+            <li>Journeyman electricians</li>
+            <li>Reliable team players</li>
+            <li>People who care about craftsmanship</li>
+            <li>People who communicate well</li>
+          </ul>
+        </div>
+
+        <div class="fitCardLight">
+          <h2>What matters most</h2>
+          <p class="muted">
+            Skills matter, but attitude and work ethic matter too.
+          </p>
+          <ul>
+            <li>Show up on time</li>
+            <li>Do clean work</li>
+            <li>Stay organized</li>
+            <li>Communicate clearly</li>
+            <li>Take pride in the finished product</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- APPLY -->
+    <section id="apply" class="section">
+      <div class="estimateWrap">
+        <div class="card">
+          <h2 class="center">Apply to Heico Electric</h2>
+          <p class="muted center">
+            Tell us about your experience, the kind of work you’re looking for, and how to reach you.
+          </p>
+
+          <form
+            name="careers-application"
+            method="POST"
+            data-netlify="true"
+            data-netlify-honeypot="bot-field"
+            enctype="multipart/form-data"
+            action="/thanks.html"
+            class="estimateForm"
+          >
+            <input type="hidden" name="form-name" value="careers-application" />
+            <p class="hiddenField">
+              <label>Don’t fill this out: <input name="bot-field" /></label>
+            </p>
+
+            <div class="formGrid">
+              <label>
+                Name
+                <input name="name" type="text" required />
+              </label>
+
+              <label>
+                Phone
+                <input name="phone" type="tel" required />
+              </label>
+
+              <label>
+                Email
+                <input name="email" type="email" required />
+              </label>
+
+              <label>
+                City / Area
+                <input name="location" type="text" placeholder="Kalispell / Whitefish / Bigfork / Polson..." />
+              </label>
+
+              <label class="full">
+                Position
+                <select name="position" required>
+                  <option value="" selected disabled>Select one</option>
+                  <option>Apprentice Electrician</option>
+                  <option>Journeyman Electrician</option>
+                  <option>General Application</option>
+                </select>
+              </label>
+
+              <label class="full">
+                Experience
+                <textarea name="experience" required placeholder="Tell us about your experience, licenses, certifications, and the kind of work you’ve done."></textarea>
+              </label>
+
+              <label class="full">
+                Resume (optional)
+                <input name="resume" type="file" accept=".pdf,.doc,.docx" />
+                <div class="note">Accepted: PDF, DOC, or DOCX</div>
+              </label>
+
+              <button class="btn btnPrimary full" type="submit">Send Application</button>
+            </div>
+          </form>
+
+          <p class="note center estimate-note">
+            Prefer to email directly? <strong>Mitchell@heico-mt.com</strong>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- FINAL CTA -->
+    <section class="section">
+      <div class="ctaBand">
+        <h2>Want to work with a team that values quality?</h2>
+        <p>
+          If you care about clean installs, professionalism, and doing the job right, we’d like to hear from you.
+        </p>
+        <div class="ctaRow">
+          <a class="btn btnPrimary" href="#apply">Apply Now</a>
+          <a class="btn" href="mailto:Mitchell@heico-mt.com">Email Mitchell</a>
+        </div>
+        <p class="ctaTagline"><strong>That’s Watts up.</strong></p>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <div class="footer">
+      Heico Electric Inc. • Kalispell, Montana • That’s Watts up
     </div>
 
-    <div class="card">
-      <p><strong>Prefer a call?</strong> 406-212-2398 • Mitchell@heico-mt.com</p>
-      <p class="note" style="margin:0">Thats Watts up.</p>
-    </div>
   </div>
 </body>
 </html>
