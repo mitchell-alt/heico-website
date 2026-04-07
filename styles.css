@@ -334,7 +334,12 @@ p {
   font-size: .98rem;
   letter-spacing: .04em;
 }
-
+.strongHero {
+  font-size: clamp(1.3rem, 2vw, 1.6rem);
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 12px;
+}
 .hero-subheadline {
   font-size: 1.15rem;
   line-height: 1.7;
