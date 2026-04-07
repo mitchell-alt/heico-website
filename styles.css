@@ -316,6 +316,14 @@ p {
   margin-bottom: 10px;
   color: #fff;
 }
+.heroRightHeadline {
+  font-size: clamp(1.9rem, 3vw, 2.6rem);
+  line-height: 1.05;
+  font-weight: 900;
+  letter-spacing: -0.01em;
+  margin-bottom: 10px;
+  color: var(--text);
+}
 .bigTagline {
   text-shadow: 0 6px 20px rgba(243,194,77,.35);
 }
