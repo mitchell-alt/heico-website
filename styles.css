@@ -297,15 +297,14 @@ p {
 .bioHero {
   background:
     linear-gradient(rgba(10,16,26,.72), rgba(10,16,26,.56)),
-    url('mitchell-heidegger-heico-electricmt.jpg') center/cover no-repeat;
+    url('images/mitchell-heidegger-heico-electricmt.jpg') center/cover no-repeat;
 }
 
 .bradleyHero {
   background:
     linear-gradient(rgba(10,16,26,.72), rgba(10,16,26,.56)),
-    url('bradley-babcock-heico-electric.jpg') center/cover no-repeat;
+    url('images/bradley-babcock-heico-electric.jpg') center/cover no-repeat;
 }
-
 
 .heroCard h1 {
   color: #fff;
