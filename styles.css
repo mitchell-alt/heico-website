@@ -309,7 +309,24 @@ p {
 .heroCard h1 {
   color: #fff;
 }
-
+.hero-brand {
+  font-size: clamp(3rem, 6vw, 5rem);
+  font-weight: 900;
+  letter-spacing: -0.02em;
+  margin-bottom: 10px;
+  color: #fff;
+}
+.bigTagline {
+  text-shadow: 0 6px 20px rgba(243,194,77,.35);
+}
+💥 What this does
+.bigTagline {
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 900;
+  color: var(--primary);
+  margin-bottom: 14px;
+  letter-spacing: 0.01em;
+}
 .hero-services {
   font-weight: 800;
   color: var(--primary);
