@@ -279,7 +279,7 @@ p {
   min-height: 520px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   box-shadow: 0 18px 40px rgba(0,0,0,.18);
 }
 
