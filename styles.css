@@ -294,7 +294,6 @@ p {
     linear-gradient(rgba(10,16,26,.72), rgba(10,16,26,.56)),
     url('heico-team.jpg') center/cover no-repeat;
 }
-
 .bioHero {
   background:
     linear-gradient(rgba(10,16,26,.72), rgba(10,16,26,.56)),
@@ -306,6 +305,7 @@ p {
     linear-gradient(rgba(10,16,26,.72), rgba(10,16,26,.56)),
     url('bradley-babcock-heico-electric.jpg') center/cover no-repeat;
 }
+
 
 .heroCard h1 {
   color: #fff;
